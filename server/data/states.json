@@ -21,7 +21,7 @@
       "Kamakhya Temple",
       "Majuli Island"
     ],
-    "cities": ["guwahati", "jorhat"],
+    "cities": ["guwahati", "jorhat", "kaziranga", "shivasagar", "majuli", "haflong"],
     "festivals": [
       {
         "name": "Bihu",
