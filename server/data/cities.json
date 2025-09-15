@@ -41,7 +41,15 @@
       "Fish Curry",
       "Ropeway"
     ],
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "1757961768916",
+        "url": "/uploads/1757961768909-766626895.jpg",
+        "caption": "",
+        "moderated": true,
+        "uploadedAt": "2025-09-15T18:42:48.916Z"
+      }
+    ],
     "pois": [
       {
         "id": "poi1",

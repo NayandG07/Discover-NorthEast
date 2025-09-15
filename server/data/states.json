@@ -10,16 +10,19 @@
       "lng": 92.9376
     },
     "featuredImages": [
-      "/assets/assam-1.jpg",
-      "/assets/assam-2.jpg",
-      "/assets/assam-3.jpg"
+      "https://www.ibef.org/assets/images/states/Assam-2.jpg",
+      "https://assets.cntraveller.in/photos/652cf8465f1cfc7fbc5c7e84/16:9/w_1024%2Cc_limit/GettyImages-1319735915.jpg",
+      "/assets/assam/sivsagar/rang-ghar.jpg"
     ],
     "highlights": [
       "Kaziranga National Park",
-      "Tea Gardens",
-      "Brahmaputra River",
+      "Majuli Island",
+      "Sivasagar",
       "Kamakhya Temple",
-      "Majuli Island"
+      "Manas National Park",
+      "Assam State Museum",
+      "Chakradhara Temple (Hajo)",
+      "Sualkuchi"
     ],
     "cities": [
       "guwahati",
@@ -60,10 +63,13 @@
     ],
     "highlights": [
       "Tawang Monastery",
-      "Sela Pass",
-      "Namdapha National Park",
       "Ziro Valley",
-      "Parasuram Kund"
+      "Bomdila Monastery",
+      "Sela Pass & Lake",
+      "Namdapha National Park",
+      "Itanagar Capital Complex",
+      "Mechuka Valley",
+      "Parshuram Kund"
     ],
     "cities": [
       "itanagar",
@@ -99,11 +105,14 @@
       "/assets/meghalaya-3.jpg"
     ],
     "highlights": [
-      "Living Root Bridges",
-      "Cherrapunji",
+      "Shillong",
+      "Cherrapunji (Sohra)",
       "Mawsynram",
+      "Mawlynnong Village",
+      "Elephant Falls",
       "Umiam Lake",
-      "Mawphlang Sacred Forest"
+      "Nongriat Village",
+      "Balpakram National Park"
     ],
     "cities": [
       "shillong",
@@ -139,11 +148,14 @@
       "/assets/manipur-3.jpg"
     ],
     "highlights": [
+      "Imphal Palace (Kangla Fort)",
       "Loktak Lake",
-      "Keibul Lamjao National Park",
-      "Ima Keithel (Women's Market)",
-      "Kangla Fort",
-      "Shirui Hills"
+      "Khonghampat Orchidarium",
+      "Shree Govindajee Temple",
+      "Thangjing Hill",
+      "Moreh",
+      "Andro Village",
+      "Shirui Peak and Shirui Lily"
     ],
     "cities": [
       "imphal",
@@ -179,11 +191,14 @@
       "/assets/mizoram-3.jpg"
     ],
     "highlights": [
-      "Blue Mountains",
-      "Phawngpui Peak",
-      "Vantawng Falls",
+      "Aizawl",
+      "Phawngpui (Blue Mountain)",
+      "Tam Dil Lake",
       "Reiek Heritage Village",
-      "Palak Lake"
+      "Vantawng Falls",
+      "Dampa Tiger Reserve",
+      "Chawngtlai Village",
+      "Lunglei"
     ],
     "cities": [
       "aizawl",
@@ -219,11 +234,14 @@
       "/assets/nagaland-3.jpg"
     ],
     "highlights": [
+      "Kohima War Cemetery",
       "Hornbill Festival",
       "Dzukou Valley",
-      "Kohima War Cemetery",
+      "Nagaland State Museum",
+      "Khonoma Village",
+      "Shilloi Lake",
       "Mokokchung",
-      "Traditional Naga Villages"
+      "Japfu Peak"
     ],
     "cities": [
       "kohima",
@@ -300,10 +318,13 @@
     ],
     "highlights": [
       "Ujjayanta Palace",
-      "Neermahal Water Palace",
+      "Neermahal Palace",
+      "Unakoti",
       "Tripura Sundari Temple",
-      "Unakoti Rock Carvings",
-      "Sepahijala Wildlife Sanctuary"
+      "Sepahijala Wildlife Sanctuary",
+      "Jampui Hills",
+      "Pilak Archaeological Site",
+      "Rudrasagar Lake"
     ],
     "cities": [
       "agartala",

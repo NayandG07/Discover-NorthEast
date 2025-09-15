@@ -381,6 +381,100 @@ section {
     margin-bottom: var(--spacing-sm);
 }
 
+/* ===== Highlight Card Specific Styles ===== */
+.highlight-card {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    cursor: default;
+}
+
+.highlight-card:hover {
+    transform: translateY(-3px);
+}
+
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.highlight-card .city-link {
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* City card link styles */
+.city-card .city-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.3s ease;
+}
+
+.city-card:hover .city-link {
+    gap: 10px;
+}
+
+/* ===== City List Styles ===== */
+.city-list-link {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--light);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.city-list-link:hover {
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    transform: translateX(5px);
+}
+
+.city-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.city-list-link strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--dark);
+}
+
+.city-list-link p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+/* Style for tourist places in list */
+.cities-list li:has(.city-list-link:not(a)) .city-list-link {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e0e7ff 100%);
+    cursor: default;
+}
+
+.cities-list li:has(.city-list-link:not(a)) .city-list-link:hover {
+    transform: none;
+}
+
 /* ===== Features Grid ===== */
 .features-grid {
     display: grid;

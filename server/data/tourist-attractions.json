@@ -1,0 +1,128 @@
+{
+  "assam": {
+    "kamakhya-temple": {
+      "name": "Kamakhya Temple",
+      "slug": "kamakhya-temple",
+      "summary": "One of the 51 Shakti Peethas, this ancient temple atop Nilachal Hill is a major pilgrimage site and center of Tantric worship.",
+      "image": "/assets/assam/kamakhya-temple.jpg",
+      "type": "temple",
+      "location": "Guwahati"
+    },
+    "manas-national-park": {
+      "name": "Manas National Park",
+      "slug": "manas-national-park", 
+      "summary": "UNESCO World Heritage Site and Project Tiger reserve, home to tigers, elephants, rhinos and the rare golden langur.",
+      "image": "/assets/assam/manas-park.jpg",
+      "type": "wildlife",
+      "location": "Baksa"
+    },
+    "assam-state-museum": {
+      "name": "Assam State Museum",
+      "slug": "assam-state-museum",
+      "summary": "Showcases Assam's rich cultural heritage with artifacts, sculptures, manuscripts, and traditional costumes.",
+      "image": "/assets/assam/state-museum.jpg",
+      "type": "museum",
+      "location": "Guwahati"
+    },
+    "chakradhara-temple-hajo": {
+      "name": "Chakradhara Temple (Hajo)",
+      "slug": "chakradhara-temple-hajo",
+      "summary": "Sacred pilgrimage site for Hindus, Buddhists and Muslims, believed to be where Lord Buddha attained Nirvana.",
+      "image": "/assets/assam/hajo-temple.jpg",
+      "type": "temple",
+      "location": "Hajo"
+    },
+    "sualkuchi": {
+      "name": "Sualkuchi",
+      "slug": "sualkuchi",
+      "summary": "Known as the 'Manchester of Assam', this weaving village is famous for producing exquisite Muga and Pat silk.",
+      "image": "/assets/assam/sualkuchi.jpg",
+      "type": "cultural",
+      "location": "Kamrup"
+    }
+  },
+  "arunachal-pradesh": {
+    "tawang-monastery": {
+      "name": "Tawang Monastery",
+      "slug": "tawang-monastery",
+      "summary": "India's largest Buddhist monastery and the second largest in the world, perched at 10,000 feet altitude.",
+      "image": "/assets/arunachal/tawang-monastery.jpg",
+      "type": "monastery",
+      "location": "Tawang"
+    },
+    "ziro-valley": {
+      "name": "Ziro Valley",
+      "slug": "ziro-valley",
+      "summary": "UNESCO World Heritage tentative site, home to the Apatani tribe and famous for its pine hills and rice fields.",
+      "image": "/assets/arunachal/ziro-valley.jpg",
+      "type": "valley",
+      "location": "Lower Subansiri"
+    },
+    "bomdila-monastery": {
+      "name": "Bomdila Monastery",
+      "slug": "bomdila-monastery",
+      "summary": "Beautiful Buddhist monastery offering panoramic views of the Himalayan landscape and Kameng valley.",
+      "image": "/assets/arunachal/bomdila-monastery.jpg",
+      "type": "monastery",
+      "location": "Bomdila"
+    },
+    "sela-pass-lake": {
+      "name": "Sela Pass & Lake",
+      "slug": "sela-pass-lake",
+      "summary": "High altitude mountain pass at 13,700 feet with a sacred lake, often frozen in winter months.",
+      "image": "/assets/arunachal/sela-pass.jpg",
+      "type": "natural",
+      "location": "Tawang District"
+    },
+    "namdapha-national-park": {
+      "name": "Namdapha National Park",
+      "slug": "namdapha-national-park",
+      "summary": "India's third largest national park, home to four big cat species and incredible biodiversity.",
+      "image": "/assets/arunachal/namdapha.jpg",
+      "type": "wildlife",
+      "location": "Changlang"
+    }
+  },
+  "meghalaya": {
+    "elephant-falls": {
+      "name": "Elephant Falls",
+      "slug": "elephant-falls",
+      "summary": "Three-tiered waterfall near Shillong, one of the most popular tourist spots in Meghalaya.",
+      "image": "/assets/meghalaya/elephant-falls.jpg",
+      "type": "waterfall",
+      "location": "Shillong"
+    },
+    "umiam-lake": {
+      "name": "Umiam Lake",
+      "slug": "umiam-lake",
+      "summary": "Scenic reservoir surrounded by hills, popular for water sports and picnics.",
+      "image": "/assets/meghalaya/umiam-lake.jpg",
+      "type": "lake",
+      "location": "Shillong"
+    },
+    "mawlynnong-village": {
+      "name": "Mawlynnong Village",
+      "slug": "mawlynnong-village",
+      "summary": "Asia's cleanest village, known for its cleanliness, living root bridges and matrilineal society.",
+      "image": "/assets/meghalaya/mawlynnong.jpg",
+      "type": "village",
+      "location": "East Khasi Hills"
+    },
+    "nongriat-village": {
+      "name": "Nongriat Village",
+      "slug": "nongriat-village",
+      "summary": "Home to the famous double-decker living root bridge, accessible via a trek of 3500 steps.",
+      "image": "/assets/meghalaya/nongriat-bridge.jpg",
+      "type": "village",
+      "location": "Cherrapunji"
+    },
+    "balpakram-national-park": {
+      "name": "Balpakram National Park",
+      "slug": "balpakram-national-park",
+      "summary": "Known as the 'Land of Spirits' by the Garo tribe, featuring unique canyon formations.",
+      "image": "/assets/meghalaya/balpakram.jpg",
+      "type": "wildlife",
+      "location": "South Garo Hills"
+    }
+  }
+}

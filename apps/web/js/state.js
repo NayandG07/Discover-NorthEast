@@ -156,40 +156,111 @@ function populateCities(state) {
     const citiesGrid = document.getElementById('citiesGrid');
     const citiesList = document.getElementById('citiesList');
     
-    if (!state.citiesData || state.citiesData.length === 0) {
-        if (citiesGrid) citiesGrid.innerHTML = '<p>No cities data available</p>';
+    // Combine cities and popular places from highlights
+    let placesToShow = [];
+    
+    // Add cities if available
+    if (state.citiesData && state.citiesData.length > 0) {
+        placesToShow = [...state.citiesData];
+    }
+    
+    // Add popular places from highlights (excluding cities already shown)
+    if (state.highlights && state.highlights.length > 0) {
+        const cityNames = state.citiesData ? state.citiesData.map(c => c.name.toLowerCase()) : [];
+        
+        state.highlights.forEach((highlight, index) => {
+            // Handle both string and object highlights
+            const highlightName = typeof highlight === 'string' ? highlight : highlight.name;
+            const highlightData = typeof highlight === 'object' ? highlight : null;
+            
+            // Skip if this highlight is already in cities
+            if (!cityNames.includes(highlightName.toLowerCase())) {
+                // Create a place object for highlights
+                placesToShow.push({
+                    name: highlightName,
+                    slug: highlightData?.slug || highlightName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+                    summary: highlightData?.summary || `Popular tourist destination in ${state.name}`,
+                    image: highlightData?.image || null,
+                    isHighlight: true,
+                    type: 'tourist-place'
+                });
+            }
+        });
+    }
+    
+    if (placesToShow.length === 0) {
+        if (citiesGrid) citiesGrid.innerHTML = '<p>No places data available</p>';
         return;
     }
     
-    // Populate cities grid
+    // Populate places grid
     if (citiesGrid) {
-        citiesGrid.innerHTML = state.citiesData.map(city => `
-            <div class="city-card" onclick="window.location.href='city.html?slug=${city.slug}'">
-                <img src="${city.featuredImages?.[0] || '/assets/placeholder.jpg'}" 
-                     alt="${escapeHtml(city.name)}"
-                     onerror="this.src='/assets/placeholder.jpg'">
-                <div class="city-card-content">
-                    <h3>${escapeHtml(city.name)}</h3>
-                    <p>${escapeHtml(city.summary?.substring(0, 100) + '...')}</p>
-                    <span class="city-link">Explore →</span>
-                </div>
-            </div>
-        `).join('');
+        citiesGrid.innerHTML = placesToShow.map(place => {
+            // Different handling for cities vs tourist places
+            if (place.isHighlight) {
+                // Tourist place from highlights
+                return `
+                    <div class="city-card highlight-card">
+                        <div class="card-badge">Popular Place</div>
+                        <img src="${place.image || '/assets/placeholder.jpg'}" 
+                             alt="${escapeHtml(place.name)}"
+                             onerror="this.src='/assets/placeholder.jpg'">
+                        <div class="city-card-content">
+                            <h3>${escapeHtml(place.name)}</h3>
+                            <p>${escapeHtml(place.summary)}</p>
+                            <span class="city-link">🏔️ Tourist Attraction</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Regular city
+                return `
+                    <div class="city-card" onclick="window.location.href='city.html?slug=${place.slug}'">
+                        <img src="${place.featuredImages?.[0] || '/assets/placeholder.jpg'}" 
+                             alt="${escapeHtml(place.name)}"
+                             onerror="this.src='/assets/placeholder.jpg'">
+                        <div class="city-card-content">
+                            <h3>${escapeHtml(place.name)}</h3>
+                            <p>${escapeHtml(place.summary?.substring(0, 100) + '...')}</p>
+                            <span class="city-link">Explore City →</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }).join('');
     }
     
-    // Populate cities list (fallback for mobile)
+    // Populate places list (fallback for mobile)
     if (citiesList) {
-        citiesList.innerHTML = state.citiesData.map(city => `
-            <li>
-                <a href="city.html?slug=${city.slug}" class="city-list-link">
-                    <span class="city-icon">🏙️</span>
-                    <div>
-                        <strong>${escapeHtml(city.name)}</strong>
-                        <p>${escapeHtml(city.summary?.substring(0, 80) + '...')}</p>
-                    </div>
-                </a>
-            </li>
-        `).join('');
+        citiesList.innerHTML = placesToShow.map(place => {
+            if (place.isHighlight) {
+                // Tourist place
+                return `
+                    <li>
+                        <div class="city-list-link">
+                            <span class="city-icon">📍</span>
+                            <div>
+                                <strong>${escapeHtml(place.name)}</strong>
+                                <p>${escapeHtml(place.summary)}</p>
+                            </div>
+                        </div>
+                    </li>
+                `;
+            } else {
+                // Regular city
+                return `
+                    <li>
+                        <a href="city.html?slug=${place.slug}" class="city-list-link">
+                            <span class="city-icon">🏙️</span>
+                            <div>
+                                <strong>${escapeHtml(place.name)}</strong>
+                                <p>${escapeHtml(place.summary?.substring(0, 80) + '...')}</p>
+                            </div>
+                        </a>
+                    </li>
+                `;
+            }
+        }).join('');
     }
 }
 
