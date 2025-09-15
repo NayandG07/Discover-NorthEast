@@ -1,6 +1,6 @@
 // Home page functionality
 import { getAllStates, submitFeedback, showLoading, showError, showSuccess, escapeHtml } from './data.js';
-import { Slider } from './slider.js';
+import { HeroSlider } from './hero-slider.js';
 import { initMap } from './map.js';
 
 // Initialize when DOM is loaded
@@ -14,55 +14,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     initFeedbackForm();
 });
 
-// Initialize hero slider
+// Initialize enhanced hero slider with animations
 function initHeroSlider() {
-    const heroSlider = new Slider('heroSlideshow');
+    // Initialize the new HeroSlider with advanced options
+    const heroSlider = new HeroSlider('heroSlideshow', {
+        autoPlay: true,
+        autoPlayInterval: 6000,
+        transitionDuration: 1500,
+        animationType: 'fade-slide', // Options: 'fade', 'slide', 'fade-slide', 'zoom'
+        enableParallax: true,
+        enableTextAnimation: true,
+        enableProgressBar: true,
+        enableThumbnails: false, // Set to true if you want thumbnails
+        pauseOnHover: true
+    });
     
-    // Sample hero images - replace with actual images
-    const heroImages = [
-        {
-            src: '/assets/hero-1.jpg',
-            alt: 'Beautiful landscape of NorthEast India',
-            caption: {
-                title: 'Welcome to NorthEast India',
-                text: 'Explore the unexplored paradise of India'
-            }
-        },
-        {
-            src: '/assets/hero-2.jpg',
-            alt: 'Living Root Bridges of Meghalaya',
-            caption: {
-                title: 'Living Root Bridges',
-                text: 'Marvel at nature\'s engineering in Meghalaya'
-            }
-        },
-        {
-            src: '/assets/hero-3.jpg',
-            alt: 'Tawang Monastery in Arunachal Pradesh',
-            caption: {
-                title: 'Buddhist Heritage',
-                text: 'Discover ancient monasteries and spiritual peace'
-            }
-        },
-        {
-            src: '/assets/hero-4.jpg',
-            alt: 'Tea Gardens of Assam',
-            caption: {
-                title: 'Tea Gardens',
-                text: 'Experience the lush tea estates of Assam'
-            }
-        },
-        {
-            src: '/assets/hero-5.jpg',
-            alt: 'Hornbill Festival Nagaland',
-            caption: {
-                title: 'Vibrant Festivals',
-                text: 'Celebrate the rich cultural heritage'
-            }
-        }
-    ];
+    // The slider will automatically load default slides from hero-slider.js
+    // These slides already have placeholder images configured
+    // You can modify the default slides in hero-slider.js loadDefaultSlides() method
     
-    heroSlider.loadSlides(heroImages);
+    console.log('Enhanced Hero Slider initialized with animations');
 }
 
 // Initialize mobile menu

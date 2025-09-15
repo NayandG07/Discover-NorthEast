@@ -7,6 +7,7 @@
     <meta name="description" content="Discover the beauty of NorthEast India - explore 8 states with unique cultures, breathtaking landscapes, and rich heritage">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
@@ -33,22 +34,10 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Slideshow -->
+    <!-- Enhanced Hero Section with Modern Slideshow -->
     <section class="hero-section" aria-label="Featured destinations slideshow">
-        <div class="slideshow-container" id="heroSlideshow">
-            <div class="slides-wrapper">
-                <!-- Slides will be dynamically loaded -->
-                <div class="slide active">
-                    <img src="assets/hero-1.jpg" alt="Beautiful landscape of NorthEast India">
-                    <div class="slide-content">
-                        <h2>Welcome to NorthEast India</h2>
-                        <p>Explore the unexplored paradise of India</p>
-                    </div>
-                </div>
-            </div>
-            <button class="slide-prev" aria-label="Previous slide">❮</button>
-            <button class="slide-next" aria-label="Next slide">❯</button>
-            <div class="slide-indicators" role="tablist"></div>
+        <div id="heroSlideshow" class="hero-slideshow">
+            <!-- Hero slider will be dynamically initialized here -->
         </div>
     </section>
 
@@ -153,6 +142,6 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="js/home.js"></script>
-    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/hero-slider.js"></script>
 </body>
 </html>
