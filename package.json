@@ -1,0 +1,24 @@
+{
+  "name": "discover-northeast",
+  "version": "1.0.0",
+  "description": "Discover NorthEast India - Hackathon MVP showcasing tourism in NE states",
+  "main": "server/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "test": "node tests/data-test.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": ["tourism", "northeast-india", "hackathon", "travel"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}

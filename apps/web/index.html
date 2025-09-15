@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover NorthEast India - Explore the Unexplored</title>
+    <meta name="description" content="Discover the beauty of NorthEast India - explore 8 states with unique cultures, breathtaking landscapes, and rich heritage">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">Discover NorthEast</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="#states">States</a></li>
+                    <li><a href="#highlights">Highlights</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin.html" class="admin-link">Admin</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="hero-section" aria-label="Featured destinations slideshow">
+        <div class="slideshow-container" id="heroSlideshow">
+            <div class="slides-wrapper">
+                <!-- Slides will be dynamically loaded -->
+                <div class="slide active">
+                    <img src="assets/hero-1.jpg" alt="Beautiful landscape of NorthEast India">
+                    <div class="slide-content">
+                        <h2>Welcome to NorthEast India</h2>
+                        <p>Explore the unexplored paradise of India</p>
+                    </div>
+                </div>
+            </div>
+            <button class="slide-prev" aria-label="Previous slide">❮</button>
+            <button class="slide-next" aria-label="Next slide">❯</button>
+            <div class="slide-indicators" role="tablist"></div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section" id="states">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore NorthEast States</h2>
+                <p>Click on any state to discover its unique attractions</p>
+            </div>
+            <div class="map-container">
+                <div id="homeMap" class="interactive-map" aria-label="Interactive map of NorthEast India"></div>
+                <!-- Fallback List for Mobile/Accessibility -->
+                <div class="states-list-fallback" id="statesListFallback">
+                    <h3>Select a State:</h3>
+                    <ul class="states-grid" role="list">
+                        <!-- Will be populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Grid Section -->
+    <section class="highlights-section" id="highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Destinations</h2>
+                <p>Discover the most visited places in NorthEast India</p>
+            </div>
+            <div class="highlights-grid" id="highlightsGrid">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Visit NorthEast India?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏔️</div>
+                    <h3>Stunning Landscapes</h3>
+                    <p>From snow-capped mountains to lush valleys</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Rich Culture</h3>
+                    <p>Experience diverse traditions and festivals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌺</div>
+                    <h3>Unique Flora & Fauna</h3>
+                    <p>Home to rare species and biodiversity hotspots</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍲</div>
+                    <h3>Authentic Cuisine</h3>
+                    <p>Taste unique local delicacies and traditional foods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@discovernortheast.com">info@discovernortheast.com</a></p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#states">Explore States</a></li>
+                        <li><a href="#highlights">Popular Places</a></li>
+                        <li><a href="admin.html">Admin Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Send Feedback</h3>
+                    <form id="feedbackForm" class="feedback-form">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
+                        <textarea name="message" placeholder="Your feedback..." rows="3" required aria-label="Your feedback"></textarea>
+                        <button type="submit" class="btn btn-primary">Send Feedback</button>
+                    </form>
+                    <div id="feedbackMessage" class="feedback-message"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Discover NorthEast. Made with ❤️ for Hackathon</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="js/home.js"></script>
+    <script type="module" src="js/slider.js"></script>
+</body>
+</html>

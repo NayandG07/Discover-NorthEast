@@ -1,0 +1,298 @@
+[
+  {
+    "id": "1",
+    "slug": "assam",
+    "name": "Assam",
+    "description": "Assam, the gateway to Northeast India, is known for its tea gardens, rich biodiversity, and the mighty Brahmaputra River. Home to the one-horned rhinoceros and vibrant cultural traditions.",
+    "history": "Assam has a rich history dating back to the ancient Kamarupa Kingdom. It was ruled by the Ahom dynasty for nearly 600 years before becoming part of British India. The state has been a melting pot of various cultures and ethnicities.",
+    "coords": {
+      "lat": 26.2006,
+      "lng": 92.9376
+    },
+    "featuredImages": [
+      "/assets/assam-1.jpg",
+      "/assets/assam-2.jpg",
+      "/assets/assam-3.jpg"
+    ],
+    "highlights": [
+      "Kaziranga National Park",
+      "Tea Gardens",
+      "Brahmaputra River",
+      "Kamakhya Temple",
+      "Majuli Island"
+    ],
+    "cities": ["guwahati", "jorhat"],
+    "festivals": [
+      {
+        "name": "Bihu",
+        "summary": "The most important festival of Assam celebrated three times a year"
+      },
+      {
+        "name": "Ambubachi Mela",
+        "summary": "Annual Hindu mela at Kamakhya Temple"
+      }
+    ],
+    "capital": "Dispur",
+    "languages": "Assamese, Bengali, Hindi",
+    "bestTime": "October to March"
+  },
+  {
+    "id": "2",
+    "slug": "arunachal-pradesh",
+    "name": "Arunachal Pradesh",
+    "description": "The 'Land of the Dawn-Lit Mountains', Arunachal Pradesh is India's easternmost state with pristine natural beauty, diverse tribal cultures, and Buddhist monasteries.",
+    "history": "Arunachal Pradesh has been inhabited by indigenous tribes for millennia. It was known as the North-East Frontier Agency (NEFA) during British rule and became a full-fledged state in 1987.",
+    "coords": {
+      "lat": 28.2180,
+      "lng": 94.7278
+    },
+    "featuredImages": [
+      "/assets/arunachal-1.jpg",
+      "/assets/arunachal-2.jpg",
+      "/assets/arunachal-3.jpg"
+    ],
+    "highlights": [
+      "Tawang Monastery",
+      "Sela Pass",
+      "Namdapha National Park",
+      "Ziro Valley",
+      "Parasuram Kund"
+    ],
+    "cities": ["itanagar", "tawang"],
+    "festivals": [
+      {
+        "name": "Losar",
+        "summary": "Buddhist New Year celebration"
+      },
+      {
+        "name": "Ziro Music Festival",
+        "summary": "Annual outdoor music festival in Ziro Valley"
+      }
+    ],
+    "capital": "Itanagar",
+    "languages": "English, Hindi, Various tribal languages",
+    "bestTime": "October to April"
+  },
+  {
+    "id": "3",
+    "slug": "meghalaya",
+    "name": "Meghalaya",
+    "description": "The 'Abode of Clouds', Meghalaya is famous for its living root bridges, stunning waterfalls, caves, and being one of the wettest places on Earth.",
+    "history": "Meghalaya was carved out of Assam in 1972. The state is home to the Khasi, Jaintia, and Garo tribes, each with distinct cultural traditions and matrilineal societies.",
+    "coords": {
+      "lat": 25.4670,
+      "lng": 91.3662
+    },
+    "featuredImages": [
+      "/assets/meghalaya-1.jpg",
+      "/assets/meghalaya-2.jpg",
+      "/assets/meghalaya-3.jpg"
+    ],
+    "highlights": [
+      "Living Root Bridges",
+      "Cherrapunji",
+      "Mawsynram",
+      "Umiam Lake",
+      "Mawphlang Sacred Forest"
+    ],
+    "cities": ["shillong", "cherrapunji"],
+    "festivals": [
+      {
+        "name": "Nongkrem Dance",
+        "summary": "Harvest festival of the Khasi tribe"
+      },
+      {
+        "name": "Wangala",
+        "summary": "Harvest festival of the Garo tribe"
+      }
+    ],
+    "capital": "Shillong",
+    "languages": "Khasi, Garo, English, Hindi",
+    "bestTime": "October to May"
+  },
+  {
+    "id": "4",
+    "slug": "manipur",
+    "name": "Manipur",
+    "description": "The 'Jewel of India', Manipur is known for its natural beauty, rich culture, classical dance form Manipuri, and the floating Loktak Lake.",
+    "history": "Manipur has a recorded history of over 2000 years. The Meithei kingdom was independent until the British colonial period. It became a state of India in 1972.",
+    "coords": {
+      "lat": 24.6637,
+      "lng": 93.9063
+    },
+    "featuredImages": [
+      "/assets/manipur-1.jpg",
+      "/assets/manipur-2.jpg",
+      "/assets/manipur-3.jpg"
+    ],
+    "highlights": [
+      "Loktak Lake",
+      "Keibul Lamjao National Park",
+      "Ima Keithel (Women's Market)",
+      "Kangla Fort",
+      "Shirui Hills"
+    ],
+    "cities": ["imphal", "moirang"],
+    "festivals": [
+      {
+        "name": "Yaoshang",
+        "summary": "Manipuri version of Holi celebrated for five days"
+      },
+      {
+        "name": "Lai Haraoba",
+        "summary": "Traditional festival celebrating deities"
+      }
+    ],
+    "capital": "Imphal",
+    "languages": "Meiteilon (Manipuri), English, Hindi",
+    "bestTime": "October to March"
+  },
+  {
+    "id": "5",
+    "slug": "mizoram",
+    "name": "Mizoram",
+    "description": "The 'Land of the Hill People', Mizoram is known for its dramatic hills, pleasant climate, and the unique bamboo flowering phenomenon that occurs once every 48 years.",
+    "history": "Mizoram was historically inhabited by various Mizo tribes. It was annexed by the British in 1890s and became a Union Territory in 1972, gaining statehood in 1987.",
+    "coords": {
+      "lat": 23.1645,
+      "lng": 92.9376
+    },
+    "featuredImages": [
+      "/assets/mizoram-1.jpg",
+      "/assets/mizoram-2.jpg",
+      "/assets/mizoram-3.jpg"
+    ],
+    "highlights": [
+      "Blue Mountains",
+      "Phawngpui Peak",
+      "Vantawng Falls",
+      "Reiek Heritage Village",
+      "Palak Lake"
+    ],
+    "cities": ["aizawl", "lunglei"],
+    "festivals": [
+      {
+        "name": "Chapchar Kut",
+        "summary": "Spring festival celebrating the clearing of jhum fields"
+      },
+      {
+        "name": "Mim Kut",
+        "summary": "Harvest festival celebrated in August-September"
+      }
+    ],
+    "capital": "Aizawl",
+    "languages": "Mizo, English, Hindi",
+    "bestTime": "October to March"
+  },
+  {
+    "id": "6",
+    "slug": "nagaland",
+    "name": "Nagaland",
+    "description": "The 'Land of Festivals', Nagaland is home to diverse tribal cultures, each with unique traditions, colorful attires, and the famous Hornbill Festival.",
+    "history": "Nagaland has been inhabited by Naga tribes for centuries. After a period of conflict, it became the 16th state of India in 1963, with special provisions under Article 371A.",
+    "coords": {
+      "lat": 26.1584,
+      "lng": 94.5624
+    },
+    "featuredImages": [
+      "/assets/nagaland-1.jpg",
+      "/assets/nagaland-2.jpg",
+      "/assets/nagaland-3.jpg"
+    ],
+    "highlights": [
+      "Hornbill Festival",
+      "Dzukou Valley",
+      "Kohima War Cemetery",
+      "Mokokchung",
+      "Traditional Naga Villages"
+    ],
+    "cities": ["kohima", "dimapur"],
+    "festivals": [
+      {
+        "name": "Hornbill Festival",
+        "summary": "Festival of Festivals showcasing Naga culture every December"
+      },
+      {
+        "name": "Moatsu",
+        "summary": "Festival of the Ao tribe celebrated in May"
+      }
+    ],
+    "capital": "Kohima",
+    "languages": "English, Nagamese, Various tribal languages",
+    "bestTime": "October to May"
+  },
+  {
+    "id": "7",
+    "slug": "sikkim",
+    "name": "Sikkim",
+    "description": "A Himalayan wonderland, Sikkim is known for its biodiversity, Buddhist monasteries, adventure tourism, and stunning views of Kanchenjunga, the third-highest peak in the world.",
+    "history": "Sikkim was an independent Buddhist kingdom until 1975 when it became India's 22nd state. It has a unique cultural blend of Lepchas, Bhutias, and Nepalese communities.",
+    "coords": {
+      "lat": 27.5330,
+      "lng": 88.5122
+    },
+    "featuredImages": [
+      "/assets/sikkim-1.jpg",
+      "/assets/sikkim-2.jpg",
+      "/assets/sikkim-3.jpg"
+    ],
+    "highlights": [
+      "Kanchenjunga",
+      "Nathula Pass",
+      "Rumtek Monastery",
+      "Tsomgo Lake",
+      "Yumthang Valley"
+    ],
+    "cities": ["gangtok", "pelling"],
+    "festivals": [
+      {
+        "name": "Losar",
+        "summary": "Tibetan New Year celebrated with traditional rituals"
+      },
+      {
+        "name": "Saga Dawa",
+        "summary": "Buddhist festival celebrating Buddha's enlightenment"
+      }
+    ],
+    "capital": "Gangtok",
+    "languages": "Nepali, English, Hindi, Lepcha, Bhutia",
+    "bestTime": "March to June, September to December"
+  },
+  {
+    "id": "8",
+    "slug": "tripura",
+    "name": "Tripura",
+    "description": "The 'Land of Two Goddesses', Tripura is known for its palaces, temples, rich cultural heritage, and being home to diverse tribal communities.",
+    "history": "Tripura was ruled by the Manikya dynasty for over 1300 years before merging with India in 1949. It has a rich history of art, culture, and architecture influenced by Bengali and tribal traditions.",
+    "coords": {
+      "lat": 23.9408,
+      "lng": 91.9882
+    },
+    "featuredImages": [
+      "/assets/tripura-1.jpg",
+      "/assets/tripura-2.jpg",
+      "/assets/tripura-3.jpg"
+    ],
+    "highlights": [
+      "Ujjayanta Palace",
+      "Neermahal Water Palace",
+      "Tripura Sundari Temple",
+      "Unakoti Rock Carvings",
+      "Sepahijala Wildlife Sanctuary"
+    ],
+    "cities": ["agartala", "udaipur-tripura"],
+    "festivals": [
+      {
+        "name": "Garia Puja",
+        "summary": "Tribal festival celebrated in April"
+      },
+      {
+        "name": "Kharchi Puja",
+        "summary": "Festival of 14 deities celebrated in July"
+      }
+    ],
+    "capital": "Agartala",
+    "languages": "Bengali, Kokborok, English, Hindi",
+    "bestTime": "October to March"
+  }
+]

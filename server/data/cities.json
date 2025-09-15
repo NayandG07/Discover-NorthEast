@@ -1,0 +1,898 @@
+[
+  {
+    "id": "1",
+    "slug": "guwahati",
+    "name": "Guwahati",
+    "stateSlug": "assam",
+    "summary": "The gateway to Northeast India, Guwahati is a sprawling city on the banks of the Brahmaputra River, known for ancient temples and vibrant markets.",
+    "history": "Guwahati, formerly known as Pragjyotishpura, has been an important cultural and trading center since ancient times. It served as the capital of the Kamarupa Kingdom and has been a seat of Tantric Hinduism.",
+    "coords": {
+      "lat": 26.1445,
+      "lng": 91.7362
+    },
+    "featuredImages": [
+      "/assets/guwahati-1.jpg",
+      "/assets/guwahati-2.jpg",
+      "/assets/guwahati-3.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Kamakhya Temple",
+        "desc": "One of the 51 Shakti Peethas, this ancient temple is a major pilgrimage site"
+      },
+      {
+        "title": "Brahmaputra River Cruise",
+        "desc": "Enjoy sunset cruises on the mighty Brahmaputra River"
+      },
+      {
+        "title": "Umananda Island",
+        "desc": "Visit the world's smallest inhabited river island with its Shiva temple"
+      },
+      {
+        "title": "State Museum",
+        "desc": "Explore Assam's rich cultural heritage and artifacts"
+      }
+    ],
+    "localSpecialties": [
+      "Assam Tea",
+      "Muga Silk",
+      "Traditional Assamese Jewelry",
+      "Pitha (Rice cakes)",
+      "Fish Curry"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi1",
+        "title": "Kamakhya Temple",
+        "coords": { "lat": 26.1665, "lng": 91.7052 },
+        "type": "temple",
+        "desc": "Ancient Hindu temple dedicated to goddess Kamakhya"
+      },
+      {
+        "id": "poi2",
+        "title": "Fancy Bazaar",
+        "coords": { "lat": 26.1826, "lng": 91.7415 },
+        "type": "market",
+        "desc": "Bustling market for local goods and traditional items"
+      },
+      {
+        "id": "poi3",
+        "title": "Assam State Zoo",
+        "coords": { "lat": 26.1058, "lng": 91.7739 },
+        "type": "zoo",
+        "desc": "Home to various wildlife including the one-horned rhinoceros"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "jorhat",
+    "name": "Jorhat",
+    "stateSlug": "assam",
+    "summary": "Known as the 'Tea Capital of the World', Jorhat is surrounded by tea gardens and is the cultural capital of Assam.",
+    "history": "Jorhat served as the last capital of the Ahom Kingdom. The city has been a center of Assamese culture and is home to many historical monuments from the Ahom era.",
+    "coords": {
+      "lat": 26.7509,
+      "lng": 94.2037
+    },
+    "featuredImages": [
+      "/assets/jorhat-1.jpg",
+      "/assets/jorhat-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Tea Garden Tours",
+        "desc": "Visit sprawling tea estates and learn about tea production"
+      },
+      {
+        "title": "Majuli Island",
+        "desc": "Explore the world's largest river island and its Vaishnavite monasteries"
+      },
+      {
+        "title": "Gibbon Wildlife Sanctuary",
+        "desc": "Spot hoolock gibbons in their natural habitat"
+      }
+    ],
+    "localSpecialties": [
+      "Jorhat Tea",
+      "Bamboo Crafts",
+      "Traditional Bihu Dance",
+      "Masor Tenga (Fish curry)"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi4",
+        "title": "Raja Maidam",
+        "coords": { "lat": 26.7456, "lng": 94.2234 },
+        "type": "monument",
+        "desc": "Royal burial ground of Ahom kings"
+      },
+      {
+        "id": "poi5",
+        "title": "Tocklai Tea Research Centre",
+        "coords": { "lat": 26.7689, "lng": 94.1678 },
+        "type": "research",
+        "desc": "World's oldest tea research station"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "itanagar",
+    "name": "Itanagar",
+    "stateSlug": "arunachal-pradesh",
+    "summary": "The capital city of Arunachal Pradesh, Itanagar is known for its historical fort, Buddhist temples, and proximity to wildlife sanctuaries.",
+    "history": "Itanagar's history dates back to the 14th-15th century when the Ita Fort was built. The city derives its name from 'Ita' meaning brick and 'Nagar' meaning city.",
+    "coords": {
+      "lat": 27.0844,
+      "lng": 93.6053
+    },
+    "featuredImages": [
+      "/assets/itanagar-1.jpg",
+      "/assets/itanagar-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Ita Fort",
+        "desc": "Explore the historical fort built with millions of bricks"
+      },
+      {
+        "title": "Buddhist Temple",
+        "desc": "Visit the beautiful Buddhist temple with Tibetan architecture"
+      },
+      {
+        "title": "State Museum",
+        "desc": "Learn about tribal culture and traditions"
+      },
+      {
+        "title": "Ganga Lake",
+        "desc": "Enjoy boating and picnics at this scenic lake"
+      }
+    ],
+    "localSpecialties": [
+      "Bamboo Shoot Pickle",
+      "Traditional Tribal Handicrafts",
+      "Apong (Rice Beer)",
+      "Smoked Meat"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi6",
+        "title": "Ita Fort",
+        "coords": { "lat": 27.0863, "lng": 93.6124 },
+        "type": "fort",
+        "desc": "14th century historical fort"
+      },
+      {
+        "id": "poi7",
+        "title": "Ganga Lake",
+        "coords": { "lat": 27.1298, "lng": 93.6211 },
+        "type": "lake",
+        "desc": "Popular recreational spot"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "tawang",
+    "name": "Tawang",
+    "stateSlug": "arunachal-pradesh",
+    "summary": "A high-altitude town famous for its Buddhist monastery, stunning landscapes, and Indo-China border proximity.",
+    "history": "Tawang has been an important center of Tibetan Buddhism for centuries. The Tawang Monastery, founded in 1680, is the largest monastery in India.",
+    "coords": {
+      "lat": 27.5860,
+      "lng": 91.8687
+    },
+    "featuredImages": [
+      "/assets/tawang-1.jpg",
+      "/assets/tawang-2.jpg",
+      "/assets/tawang-3.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Tawang Monastery",
+        "desc": "Visit India's largest monastery and second largest in the world"
+      },
+      {
+        "title": "Sela Pass",
+        "desc": "Drive through this high-altitude pass with stunning views"
+      },
+      {
+        "title": "War Memorial",
+        "desc": "Pay respects at the memorial for 1962 Indo-China war martyrs"
+      },
+      {
+        "title": "P.T. Tso Lake",
+        "desc": "Visit this beautiful high-altitude lake"
+      }
+    ],
+    "localSpecialties": [
+      "Yak Cheese",
+      "Tibetan Carpets",
+      "Thukpa (Noodle soup)",
+      "Buddhist Artifacts"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi8",
+        "title": "Tawang Monastery",
+        "coords": { "lat": 27.5847, "lng": 91.8567 },
+        "type": "monastery",
+        "desc": "400-year-old Buddhist monastery"
+      },
+      {
+        "id": "poi9",
+        "title": "Tawang War Memorial",
+        "coords": { "lat": 27.5921, "lng": 91.8743 },
+        "type": "memorial",
+        "desc": "Memorial for 1962 war martyrs"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "shillong",
+    "name": "Shillong",
+    "stateSlug": "meghalaya",
+    "summary": "The 'Scotland of the East', Shillong is the capital of Meghalaya, known for its pine-covered hills, waterfalls, and vibrant music scene.",
+    "history": "Shillong became the capital of Assam under British rule in 1874. After Meghalaya gained statehood in 1972, it became the state capital.",
+    "coords": {
+      "lat": 25.5788,
+      "lng": 91.8933
+    },
+    "featuredImages": [
+      "/assets/shillong-1.jpg",
+      "/assets/shillong-2.jpg",
+      "/assets/shillong-3.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Umiam Lake",
+        "desc": "Enjoy water sports at this scenic reservoir"
+      },
+      {
+        "title": "Elephant Falls",
+        "desc": "Visit the three-tiered waterfall"
+      },
+      {
+        "title": "Ward's Lake",
+        "desc": "Stroll around this horseshoe-shaped lake in the city center"
+      },
+      {
+        "title": "Police Bazaar",
+        "desc": "Shop for local handicrafts and enjoy street food"
+      }
+    ],
+    "localSpecialties": [
+      "Khasi Traditional Shawls",
+      "Bamboo Handicrafts",
+      "Jadoh (Rice and meat dish)",
+      "Local Music Scene",
+      "Orange Honey"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi10",
+        "title": "Umiam Lake",
+        "coords": { "lat": 25.6538, "lng": 91.8815 },
+        "type": "lake",
+        "desc": "Large reservoir for water sports"
+      },
+      {
+        "id": "poi11",
+        "title": "Elephant Falls",
+        "coords": { "lat": 25.5372, "lng": 91.8196 },
+        "type": "waterfall",
+        "desc": "Three-tiered scenic waterfall"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "slug": "cherrapunji",
+    "name": "Cherrapunji",
+    "stateSlug": "meghalaya",
+    "summary": "Once the wettest place on Earth, Cherrapunji is famous for living root bridges, dramatic waterfalls, and limestone caves.",
+    "history": "Known locally as Sohra, Cherrapunji was the first capital of the British in the Khasi Hills. It holds records for the highest rainfall in a calendar year.",
+    "coords": {
+      "lat": 25.2703,
+      "lng": 91.7141
+    },
+    "featuredImages": [
+      "/assets/cherrapunji-1.jpg",
+      "/assets/cherrapunji-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Double Decker Living Root Bridge",
+        "desc": "Trek to see the famous two-tier living root bridge"
+      },
+      {
+        "title": "Nohkalikai Falls",
+        "desc": "Visit India's tallest plunge waterfall"
+      },
+      {
+        "title": "Mawsmai Cave",
+        "desc": "Explore limestone caves with impressive formations"
+      },
+      {
+        "title": "Seven Sisters Falls",
+        "desc": "View the seven-segmented waterfall"
+      }
+    ],
+    "localSpecialties": [
+      "Living Root Bridge Tours",
+      "Local Khasi Cuisine",
+      "Bamboo Products",
+      "Rain Gear"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi12",
+        "title": "Nohkalikai Falls",
+        "coords": { "lat": 25.2754, "lng": 91.6897 },
+        "type": "waterfall",
+        "desc": "India's tallest plunge waterfall"
+      },
+      {
+        "id": "poi13",
+        "title": "Living Root Bridge",
+        "coords": { "lat": 25.2456, "lng": 91.7234 },
+        "type": "bridge",
+        "desc": "Natural bridge made from living tree roots"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "slug": "imphal",
+    "name": "Imphal",
+    "stateSlug": "manipur",
+    "summary": "The capital of Manipur, Imphal is known for its historical significance, cultural heritage, and the unique all-women's market.",
+    "history": "Imphal has been the capital of Manipur since ancient times. It played a crucial role in World War II as the site of the Battle of Imphal against Japanese forces.",
+    "coords": {
+      "lat": 24.8170,
+      "lng": 93.9368
+    },
+    "featuredImages": [
+      "/assets/imphal-1.jpg",
+      "/assets/imphal-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Kangla Fort",
+        "desc": "Explore the ancient seat of Manipur's rulers"
+      },
+      {
+        "title": "Ima Keithel",
+        "desc": "Shop at Asia's largest all-women's market"
+      },
+      {
+        "title": "War Cemetery",
+        "desc": "Pay respects at the WWII memorial"
+      },
+      {
+        "title": "Manipur State Museum",
+        "desc": "Learn about local history and culture"
+      }
+    ],
+    "localSpecialties": [
+      "Manipuri Handloom",
+      "Kauna Grass Products",
+      "Eromba (Fish curry)",
+      "Manipuri Dance Costumes"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi14",
+        "title": "Kangla Fort",
+        "coords": { "lat": 24.8074, "lng": 93.9384 },
+        "type": "fort",
+        "desc": "Ancient fort and palace complex"
+      },
+      {
+        "id": "poi15",
+        "title": "Ima Keithel Market",
+        "coords": { "lat": 24.8063, "lng": 93.9344 },
+        "type": "market",
+        "desc": "All-women's market with 3000+ vendors"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "slug": "moirang",
+    "name": "Moirang",
+    "stateSlug": "manipur",
+    "summary": "A historic town on the shores of Loktak Lake, known for its role in India's independence movement and ancient temples.",
+    "history": "Moirang is where the flag of the Indian National Army was first hoisted on Indian soil in 1944. It has ancient connections to Manipuri folklore and the epic love story of Khamba-Thoibi.",
+    "coords": {
+      "lat": 24.4969,
+      "lng": 93.7764
+    },
+    "featuredImages": [
+      "/assets/moirang-1.jpg",
+      "/assets/moirang-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Loktak Lake",
+        "desc": "Visit the largest freshwater lake in Northeast India"
+      },
+      {
+        "title": "INA Museum",
+        "desc": "Learn about the Indian National Army's history"
+      },
+      {
+        "title": "Keibul Lamjao National Park",
+        "desc": "See the only floating national park in the world"
+      },
+      {
+        "title": "Thangjing Temple",
+        "desc": "Visit the ancient temple of the Moirang deity"
+      }
+    ],
+    "localSpecialties": [
+      "Fresh Fish from Loktak",
+      "Phumdi Souvenirs",
+      "Traditional Fishing Gear",
+      "Local Handicrafts"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi16",
+        "title": "Loktak Lake",
+        "coords": { "lat": 24.5052, "lng": 93.7681 },
+        "type": "lake",
+        "desc": "Largest freshwater lake in NE India"
+      },
+      {
+        "id": "poi17",
+        "title": "INA Museum",
+        "coords": { "lat": 24.4981, "lng": 93.7752 },
+        "type": "museum",
+        "desc": "Museum dedicated to Indian National Army"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "slug": "aizawl",
+    "name": "Aizawl",
+    "stateSlug": "mizoram",
+    "summary": "The capital of Mizoram, perched on a ridge, Aizawl offers panoramic views, vibrant markets, and rich Mizo culture.",
+    "history": "Aizawl was established in the 1890s as a military outpost during British rule. It became the capital of Mizoram when it achieved statehood in 1987.",
+    "coords": {
+      "lat": 23.7271,
+      "lng": 92.7176
+    },
+    "featuredImages": [
+      "/assets/aizawl-1.jpg",
+      "/assets/aizawl-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Solomon's Temple",
+        "desc": "Visit the impressive church with beautiful architecture"
+      },
+      {
+        "title": "Bara Bazaar",
+        "desc": "Shop for traditional Mizo textiles and handicrafts"
+      },
+      {
+        "title": "Mizoram State Museum",
+        "desc": "Learn about Mizo culture and history"
+      },
+      {
+        "title": "Durtlang Hills",
+        "desc": "Enjoy panoramic views of the city"
+      }
+    ],
+    "localSpecialties": [
+      "Mizo Puan (Traditional textile)",
+      "Bamboo and Cane Products",
+      "Bai (Vegetable stew)",
+      "Mizo Traditional Jewelry"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi18",
+        "title": "Solomon's Temple",
+        "coords": { "lat": 23.7431, "lng": 92.7214 },
+        "type": "temple",
+        "desc": "Modern church with unique architecture"
+      },
+      {
+        "id": "poi19",
+        "title": "Bara Bazaar",
+        "coords": { "lat": 23.7278, "lng": 92.7169 },
+        "type": "market",
+        "desc": "Main market for local goods"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "slug": "lunglei",
+    "name": "Lunglei",
+    "stateSlug": "mizoram",
+    "summary": "The second-largest city in Mizoram, Lunglei is known for its scenic beauty and serves as a base for exploring southern Mizoram.",
+    "history": "Lunglei, meaning 'bridge of rock', gets its name from a natural bridge-like rock formation. It served as an important administrative center during British rule.",
+    "coords": {
+      "lat": 22.8807,
+      "lng": 92.7349
+    },
+    "featuredImages": [
+      "/assets/lunglei-1.jpg",
+      "/assets/lunglei-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Khawnglung Wildlife Sanctuary",
+        "desc": "Spot diverse wildlife in natural habitat"
+      },
+      {
+        "title": "Saikuti Hall",
+        "desc": "Attend cultural performances"
+      },
+      {
+        "title": "Thorangtlang Wildlife Sanctuary",
+        "desc": "Trek through pristine forests"
+      }
+    ],
+    "localSpecialties": [
+      "Bamboo Crafts",
+      "Traditional Mizo Cuisine",
+      "Handwoven Textiles",
+      "Local Fruits"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi20",
+        "title": "Lunglei Bridge",
+        "coords": { "lat": 22.8823, "lng": 92.7361 },
+        "type": "bridge",
+        "desc": "Natural rock bridge formation"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "slug": "kohima",
+    "name": "Kohima",
+    "stateSlug": "nagaland",
+    "summary": "The capital of Nagaland, Kohima is known for its WWII history, the Hornbill Festival, and stunning mountain views.",
+    "history": "Kohima was the site of a crucial WWII battle that stopped the Japanese advance into India in 1944. It became the capital of Nagaland when the state was formed in 1963.",
+    "coords": {
+      "lat": 25.6701,
+      "lng": 94.1077
+    },
+    "featuredImages": [
+      "/assets/kohima-1.jpg",
+      "/assets/kohima-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "War Cemetery",
+        "desc": "Visit the memorial for WWII Battle of Kohima"
+      },
+      {
+        "title": "Hornbill Festival",
+        "desc": "Experience Naga culture during the December festival"
+      },
+      {
+        "title": "State Museum",
+        "desc": "See traditional Naga artifacts and costumes"
+      },
+      {
+        "title": "Kisama Heritage Village",
+        "desc": "Explore traditional Naga village life"
+      }
+    ],
+    "localSpecialties": [
+      "Naga Shawls",
+      "Bamboo Products",
+      "Smoked Pork",
+      "Traditional Naga Jewelry"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi21",
+        "title": "Kohima War Cemetery",
+        "coords": { "lat": 25.6721, "lng": 94.1053 },
+        "type": "cemetery",
+        "desc": "WWII memorial cemetery"
+      },
+      {
+        "id": "poi22",
+        "title": "Kisama Heritage Village",
+        "coords": { "lat": 25.6456, "lng": 94.1123 },
+        "type": "village",
+        "desc": "Venue for Hornbill Festival"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "slug": "dimapur",
+    "name": "Dimapur",
+    "stateSlug": "nagaland",
+    "summary": "The commercial hub of Nagaland and gateway to the state, Dimapur has ancient ruins and serves as the main entry point.",
+    "history": "Dimapur was the capital of the Kachari Kingdom before its fall in the 13th century. The ruins of the kingdom can still be seen today.",
+    "coords": {
+      "lat": 25.9045,
+      "lng": 93.7247
+    },
+    "featuredImages": [
+      "/assets/dimapur-1.jpg",
+      "/assets/dimapur-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Kachari Ruins",
+        "desc": "Explore ancient megalithic structures"
+      },
+      {
+        "title": "Dimapur Market",
+        "desc": "Shop for local produce and handicrafts"
+      },
+      {
+        "title": "Rangapahar Reserve Forest",
+        "desc": "Spot wildlife in natural habitat"
+      }
+    ],
+    "localSpecialties": [
+      "Naga King Chilli",
+      "Traditional Textiles",
+      "Bamboo Shoots",
+      "Local Handicrafts"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi23",
+        "title": "Kachari Ruins",
+        "coords": { "lat": 25.8956, "lng": 93.7312 },
+        "type": "ruins",
+        "desc": "13th century kingdom ruins"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "slug": "gangtok",
+    "name": "Gangtok",
+    "stateSlug": "sikkim",
+    "summary": "The capital of Sikkim, Gangtok offers stunning views of Kanchenjunga, Buddhist monasteries, and adventure activities.",
+    "history": "Gangtok became the capital of the Kingdom of Sikkim in the mid-19th century. After Sikkim joined India in 1975, it continued as the state capital.",
+    "coords": {
+      "lat": 27.3389,
+      "lng": 88.6065
+    },
+    "featuredImages": [
+      "/assets/gangtok-1.jpg",
+      "/assets/gangtok-2.jpg",
+      "/assets/gangtok-3.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Rumtek Monastery",
+        "desc": "Visit one of Buddhism's most important monasteries"
+      },
+      {
+        "title": "MG Road",
+        "desc": "Stroll along the pedestrian-only shopping street"
+      },
+      {
+        "title": "Tsomgo Lake",
+        "desc": "Visit the glacial lake at 12,400 feet"
+      },
+      {
+        "title": "Nathula Pass",
+        "desc": "Drive to the Indo-China border"
+      }
+    ],
+    "localSpecialties": [
+      "Tibetan Handicrafts",
+      "Momos",
+      "Thukpa",
+      "Buddhist Artifacts",
+      "Organic Tea"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi24",
+        "title": "Rumtek Monastery",
+        "coords": { "lat": 27.2874, "lng": 88.6354 },
+        "type": "monastery",
+        "desc": "Important Tibetan Buddhist monastery"
+      },
+      {
+        "id": "poi25",
+        "title": "Enchey Monastery",
+        "coords": { "lat": 27.3456, "lng": 88.6012 },
+        "type": "monastery",
+        "desc": "200-year-old monastery"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "slug": "pelling",
+    "name": "Pelling",
+    "stateSlug": "sikkim",
+    "summary": "A hill station offering breathtaking views of Kanchenjunga, Pelling is known for its monasteries and adventure activities.",
+    "history": "Pelling has gained prominence as a tourist destination in recent decades. The area has historical significance with ancient monasteries like Pemayangtse.",
+    "coords": {
+      "lat": 27.2976,
+      "lng": 88.2371
+    },
+    "featuredImages": [
+      "/assets/pelling-1.jpg",
+      "/assets/pelling-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Pemayangtse Monastery",
+        "desc": "Visit the 300-year-old monastery"
+      },
+      {
+        "title": "Skywalk",
+        "desc": "Walk on India's first glass skywalk"
+      },
+      {
+        "title": "Rabdentse Ruins",
+        "desc": "Explore the ruins of Sikkim's former capital"
+      },
+      {
+        "title": "Khecheopalri Lake",
+        "desc": "Visit the sacred wish-fulfilling lake"
+      }
+    ],
+    "localSpecialties": [
+      "Local Handicrafts",
+      "Chhurpi (Yak cheese)",
+      "Traditional Sikkimese Cuisine",
+      "Organic Products"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi26",
+        "title": "Pemayangtse Monastery",
+        "coords": { "lat": 27.3024, "lng": 88.2456 },
+        "type": "monastery",
+        "desc": "One of Sikkim's oldest monasteries"
+      },
+      {
+        "id": "poi27",
+        "title": "Pelling Skywalk",
+        "coords": { "lat": 27.2987, "lng": 88.2398 },
+        "type": "viewpoint",
+        "desc": "Glass skywalk with mountain views"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "slug": "agartala",
+    "name": "Agartala",
+    "stateSlug": "tripura",
+    "summary": "The capital of Tripura, Agartala is known for its palaces, temples, and rich cultural heritage blending tribal and Bengali traditions.",
+    "history": "Agartala served as the capital of the Manikya kings of Tripura. The city has a history spanning over 500 years and became the state capital when Tripura joined India.",
+    "coords": {
+      "lat": 23.8315,
+      "lng": 91.2868
+    },
+    "featuredImages": [
+      "/assets/agartala-1.jpg",
+      "/assets/agartala-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Ujjayanta Palace",
+        "desc": "Tour the magnificent royal palace turned museum"
+      },
+      {
+        "title": "Tripura Sundari Temple",
+        "desc": "Visit one of the 51 Shakti Peethas"
+      },
+      {
+        "title": "Heritage Park",
+        "desc": "Explore miniature models of Tripura's landmarks"
+      },
+      {
+        "title": "State Museum",
+        "desc": "Learn about Tripura's history and culture"
+      }
+    ],
+    "localSpecialties": [
+      "Bamboo Crafts",
+      "Tripuri Textiles",
+      "Mui Borok (Traditional dish)",
+      "Cane Furniture"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi28",
+        "title": "Ujjayanta Palace",
+        "coords": { "lat": 23.8364, "lng": 91.2845 },
+        "type": "palace",
+        "desc": "Former royal palace, now a museum"
+      },
+      {
+        "id": "poi29",
+        "title": "Jagannath Temple",
+        "coords": { "lat": 23.8298, "lng": 91.2801 },
+        "type": "temple",
+        "desc": "Important Hindu temple"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "slug": "udaipur-tripura",
+    "name": "Udaipur",
+    "stateSlug": "tripura",
+    "summary": "Known as the 'Lake City of Tripura', Udaipur is famous for its temples, lakes, and historical significance.",
+    "history": "Udaipur served as the capital of Tripura kingdom in the past. It houses several important temples including the famous Tripura Sundari Temple.",
+    "coords": {
+      "lat": 23.5345,
+      "lng": 91.4824
+    },
+    "featuredImages": [
+      "/assets/udaipur-1.jpg",
+      "/assets/udaipur-2.jpg"
+    ],
+    "explore": [
+      {
+        "title": "Tripura Sundari Temple",
+        "desc": "Visit the famous Shakti Peeth"
+      },
+      {
+        "title": "Kalyan Sagar Lake",
+        "desc": "Enjoy the scenic lake views"
+      },
+      {
+        "title": "Bhuvaneswari Temple",
+        "desc": "Explore the ancient temple by the lake"
+      }
+    ],
+    "localSpecialties": [
+      "Temple Prasad",
+      "Local Fish Preparations",
+      "Traditional Handicrafts",
+      "Religious Artifacts"
+    ],
+    "gallery": [],
+    "pois": [
+      {
+        "id": "poi30",
+        "title": "Tripura Sundari Temple",
+        "coords": { "lat": 23.5312, "lng": 91.4856 },
+        "type": "temple",
+        "desc": "One of the 51 Shakti Peethas"
+      },
+      {
+        "id": "poi31",
+        "title": "Kalyan Sagar",
+        "coords": { "lat": 23.5367, "lng": 91.4798 },
+        "type": "lake",
+        "desc": "Scenic lake with temple"
+      }
+    ]
+  }
+]

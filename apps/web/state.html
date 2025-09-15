@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Details - Discover NorthEast India</title>
+    <meta name="description" content="Explore the state's unique attractions, cities, culture and heritage">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo"><a href="index.html">Discover NorthEast</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#states" class="active">States</a></li>
+                    <li><a href="index.html#highlights">Highlights</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin.html" class="admin-link">Admin</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><span id="stateBreadcrumb">State</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- State Hero with Slideshow -->
+    <section class="state-hero" aria-label="State featured images">
+        <div class="slideshow-container" id="stateSlideshow">
+            <div class="slides-wrapper">
+                <!-- Slides will be dynamically loaded -->
+            </div>
+            <button class="slide-prev" aria-label="Previous image">❮</button>
+            <button class="slide-next" aria-label="Next image">❯</button>
+            <div class="slide-indicators" role="tablist"></div>
+        </div>
+        <div class="state-hero-content">
+            <h1 id="stateName" class="state-title">Loading...</h1>
+            <p id="stateTagline" class="state-tagline"></p>
+        </div>
+    </section>
+
+    <!-- State Information -->
+    <section class="state-info">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Description Section -->
+                <div class="info-main">
+                    <div class="info-card">
+                        <h2>About <span id="stateNameAbout"></span></h2>
+                        <div id="stateDescription" class="description-content">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Historical Details -->
+                    <div class="info-card">
+                        <h2>History & Heritage</h2>
+                        <div id="stateHistory" class="history-content">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Festivals & Events -->
+                    <div class="info-card">
+                        <h2>Festivals & Events</h2>
+                        <div id="stateFestivals" class="festivals-list">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="info-sidebar">
+                    <!-- Regional Highlights -->
+                    <div class="sidebar-card">
+                        <h3>Regional Highlights</h3>
+                        <ul id="stateHighlights" class="highlights-list">
+                            <!-- Will be populated dynamically -->
+                        </ul>
+                    </div>
+
+                    <!-- Quick Facts -->
+                    <div class="sidebar-card">
+                        <h3>Quick Facts</h3>
+                        <div id="stateQuickFacts">
+                            <div class="fact-item">
+                                <span class="fact-icon">📍</span>
+                                <span id="stateCapital">Capital: Loading...</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-icon">🗣️</span>
+                                <span id="stateLanguages">Languages: Loading...</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-icon">🌡️</span>
+                                <span id="stateBestTime">Best Time: Oct-Mar</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive State Map -->
+    <section class="state-map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Cities</h2>
+                <p>Click on a city marker to explore its attractions</p>
+            </div>
+            <div class="map-container">
+                <div id="stateMap" class="interactive-map" aria-label="Interactive map of the state"></div>
+                <!-- Cities List Fallback -->
+                <div class="cities-list-fallback" id="citiesListFallback">
+                    <h3>Cities to Explore:</h3>
+                    <ul class="cities-list" id="citiesList">
+                        <!-- Will be populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Cities Grid -->
+    <section class="cities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Cities</h2>
+                <p>Discover the most visited cities in this state</p>
+            </div>
+            <div class="cities-grid" id="citiesGrid">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@discovernortheast.com">info@discovernortheast.com</a></p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#states">All States</a></li>
+                        <li><a href="admin.html">Admin Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Explore More</h3>
+                    <p>Discover other states in NorthEast India</p>
+                    <div id="otherStates" class="other-states-links">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Discover NorthEast. Made with ❤️ for Hackathon</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="js/state.js"></script>
+    <script type="module" src="js/slider.js"></script>
+</body>
+</html>

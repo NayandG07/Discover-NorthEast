@@ -1,0 +1,322 @@
+/* ===== Admin Login Section ===== */
+.admin-login {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+.login-card {
+    background: var(--white);
+    padding: var(--spacing-xxl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.login-card p {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ===== Admin Dashboard ===== */
+.admin-dashboard {
+    min-height: 70vh;
+    padding: var(--spacing-xl) 0;
+    background: var(--light);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+}
+
+.dashboard-header h2 {
+    margin: 0;
+}
+
+/* ===== Admin Tabs ===== */
+.admin-tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    overflow-x: auto;
+}
+
+.tab-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--gray);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: var(--dark);
+}
+
+.tab-btn.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* ===== Tab Content ===== */
+.tab-content {
+    display: none;
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* ===== Admin Controls ===== */
+.admin-controls {
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--light);
+    border-radius: var(--border-radius);
+}
+
+.admin-controls label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.admin-controls select {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ===== Edit Forms ===== */
+.edit-form {
+    padding: var(--spacing-xl);
+    background: var(--light);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-lg);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* ===== Moderation Grid ===== */
+.moderation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.moderation-item {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.moderation-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.moderation-info {
+    padding: var(--spacing-md);
+}
+
+.moderation-info p {
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin-bottom: var(--spacing-sm);
+}
+
+.moderation-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.moderation-actions button {
+    flex: 1;
+    padding: var(--spacing-xs);
+    font-size: 0.875rem;
+}
+
+.moderation-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--warning-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    border-radius: var(--border-radius);
+}
+
+.moderation-badge.approved {
+    background: var(--success-color);
+}
+
+/* ===== Feedback List ===== */
+.feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.feedback-item {
+    padding: var(--spacing-lg);
+    background: var(--light);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color);
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.feedback-author {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.feedback-date {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.feedback-email {
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feedback-message {
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ===== Status Messages ===== */
+.admin-message {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    display: none;
+}
+
+.admin-message.show {
+    display: block;
+}
+
+.admin-message.success {
+    background: rgba(39, 174, 96, 0.1);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.admin-message.error {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+}
+
+/* ===== Loading Overlay ===== */
+.admin-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.admin-loading.show {
+    display: flex;
+}
+
+.admin-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    border-top-color: var(--accent-color);
+    animation: spin 1s linear infinite;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .admin-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: left;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+    
+    .tab-btn.active {
+        border-left-color: var(--accent-color);
+        border-bottom-color: transparent;
+    }
+    
+    .moderation-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

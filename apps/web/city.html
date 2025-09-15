@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Details - Discover NorthEast India</title>
+    <meta name="description" content="Explore the city's attractions, local specialties, and cultural experiences">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo"><a href="index.html">Discover NorthEast</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#states">States</a></li>
+                    <li><a href="index.html#highlights">Highlights</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin.html" class="admin-link">Admin</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="stateBreadcrumbLink">State</a></li>
+                <li><span id="cityBreadcrumb">City</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- City Hero with Slideshow -->
+    <section class="city-hero" aria-label="City featured images">
+        <div class="slideshow-container" id="citySlideshow">
+            <div class="slides-wrapper">
+                <!-- Slides will be dynamically loaded -->
+            </div>
+            <button class="slide-prev" aria-label="Previous image">❮</button>
+            <button class="slide-next" aria-label="Next image">❯</button>
+            <div class="slide-indicators" role="tablist"></div>
+        </div>
+        <div class="city-hero-content">
+            <h1 id="cityName" class="city-title">Loading...</h1>
+            <p id="cityTagline" class="city-tagline"></p>
+        </div>
+    </section>
+
+    <!-- City Information -->
+    <section class="city-info">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Main Content -->
+                <div class="info-main">
+                    <!-- Summary -->
+                    <div class="info-card">
+                        <h2>About <span id="cityNameAbout"></span></h2>
+                        <div id="citySummary" class="summary-content">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- History -->
+                    <div class="info-card">
+                        <h2>History & Culture</h2>
+                        <div id="cityHistory" class="history-content">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Things to Do -->
+                    <div class="info-card">
+                        <h2>Things to Do</h2>
+                        <div id="cityExplore" class="explore-list">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="info-sidebar">
+                    <!-- Local Specialties -->
+                    <div class="sidebar-card">
+                        <h3>Local Specialties</h3>
+                        <ul id="citySpecialties" class="specialties-list">
+                            <!-- Will be populated dynamically -->
+                        </ul>
+                    </div>
+
+                    <!-- Quick Info -->
+                    <div class="sidebar-card">
+                        <h3>Quick Info</h3>
+                        <div id="cityQuickInfo">
+                            <div class="fact-item">
+                                <span class="fact-icon">🌡️</span>
+                                <span>Best Time: Oct-Mar</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-icon">✈️</span>
+                                <span id="cityConnectivity">Well Connected</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-icon">🏨</span>
+                                <span>Hotels Available</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upload Photo -->
+                    <div class="sidebar-card">
+                        <h3>Share Your Photos</h3>
+                        <form id="uploadForm" class="upload-form" enctype="multipart/form-data">
+                            <input type="file" id="photoInput" name="photo" accept="image/*" required>
+                            <input type="text" name="caption" placeholder="Photo caption..." maxlength="100">
+                            <button type="submit" class="btn btn-primary btn-small">Upload Photo</button>
+                        </form>
+                        <div id="uploadMessage" class="upload-message"></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- City Map with POIs -->
+    <section class="city-map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Points of Interest</h2>
+                <p>Explore key attractions and landmarks</p>
+            </div>
+            <div class="map-container">
+                <div id="cityMap" class="interactive-map" aria-label="City map with points of interest"></div>
+                <!-- POIs List -->
+                <div class="pois-list" id="poisList">
+                    <h3>Places to Visit:</h3>
+                    <ul id="poisListItems">
+                        <!-- Will be populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Photo Gallery</h2>
+                <p>Beautiful moments captured by travelers</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption">
+                <p id="lightboxCaption"></p>
+            </div>
+        </div>
+        <button class="lightbox-prev" aria-label="Previous image">❮</button>
+        <button class="lightbox-next" aria-label="Next image">❯</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@discovernortheast.com">info@discovernortheast.com</a></p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#states">All States</a></li>
+                        <li><a href="#" id="backToState">Back to State</a></li>
+                        <li><a href="admin.html">Admin Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Explore More Cities</h3>
+                    <div id="otherCities" class="other-cities-links">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Discover NorthEast. Made with ❤️ for Hackathon</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="js/city.js"></script>
+    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/lightbox.js"></script>
+</body>
+</html>
