@@ -84,7 +84,7 @@ export class HeroSlider {
         const defaultSlides = [
             {
                 // ASSAM - SLIDE IMAGE - REPLACE WITH ASSAM IMAGE
-                image: '/assets/states/assam-hero.jpg',
+                image: 'https://www.ibef.org/assets/images/states/Assam-2.jpg',
                 alt: 'Assam - Land of Red Rivers and Blue Hills',
                 title: 'Assam',
                 subtitle: 'The Gateway to Northeast India',
@@ -96,7 +96,7 @@ export class HeroSlider {
             },
             {
                 // ARUNACHAL PRADESH - SLIDE IMAGE - REPLACE WITH ARUNACHAL IMAGE
-                image: '/assets/states/arunachal-pradesh-hero.jpg',
+                image: 'https://media1.thrillophilia.com/filestore/8clfg1cvdzgobeeur099te0my6i7_1539087230_shutterstock_748402771.jpg?w=576&h=650',
                 alt: 'Arunachal Pradesh - Land of the Rising Sun',
                 title: 'Arunachal Pradesh',
                 subtitle: 'Land of the Dawn-Lit Mountains',
@@ -156,7 +156,7 @@ export class HeroSlider {
             },
             {
                 // SIKKIM - SLIDE IMAGE - REPLACE WITH SIKKIM IMAGE
-                image: '/assets/states/sikkim-hero.jpg',
+                image: 'https://www.tripsavvy.com/thmb/LV9cMvf0PkFRA1hO6-CfTyFBxgs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-606222988-5a823cff1d64040037dfd9a1.jpg',
                 alt: 'Sikkim - Land of Mystic Splendour',
                 title: 'Sikkim',
                 subtitle: 'Small but Beautiful',
