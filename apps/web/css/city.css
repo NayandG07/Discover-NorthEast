@@ -1,7 +1,7 @@
 /* City page specific styles (extracted and consolidated from components.css + page tweaks) */
 
 /* Hero */
-.city-hero { position: relative; height: 70vh; min-height: 500px; overflow: hidden; background: #000; }
+.city-hero { position: relative; height: 100vh; min-height: 745px; overflow: hidden; background: #000; }
 /* Position and style the hero text similar to home slider */
 .city-hero-content { display: none; }
 .city-title { color: var(--white); font-size: clamp(2rem, 2vw + 1rem, 3rem); margin-bottom: var(--spacing-sm); }
@@ -55,71 +55,294 @@
 .other-cities-links a { padding: var(--spacing-xs) var(--spacing-sm); background: rgba(255,255,255,0.1); border-radius: var(--border-radius); font-size: 0.875rem; }
 .other-cities-links a:hover { background: rgba(255,255,255,0.2); }
 
-/* Explore Near grid (cards) */
-.explore-near-grid {
+/* Dynamic Explore Near layout (same as Things to Do) */
+.dynamic-explore-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
+  min-height: 400px;
 }
 
-.explore-near-card {
+/* Featured explore card (left half) */
+.explore-featured {
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.explore-card-featured {
   background: var(--white);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-  cursor: pointer;
+  box-shadow: var(--box-shadow-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
-.explore-near-card:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-lg); }
+.explore-card-featured:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
-.explore-near-card img { width: 100%; height: 200px; object-fit: cover; }
+.explore-card-featured img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
 
-.explore-near-card-content { padding: var(--spacing-lg); }
-.explore-near-card-content h3 { margin-bottom: var(--spacing-sm); }
-.explore-near-card-content p { color: var(--gray); }
+.explore-card-featured:hover img {
+  transform: scale(1.05);
+}
 
-/* Things to Do grid cards */
-.things-todo-grid {
+.explore-featured-content {
+  padding: var(--spacing-xl);
+  flex: 1;
+  position: relative;
+}
+
+.explore-featured-content h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.explore-featured-content p {
+  color: var(--dark);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.explore-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s ease;
+}
+
+.explore-card-featured:hover .explore-link {
+  gap: 0.75rem;
+}
+
+/* Compact explore cards grid (right half) */
+.explore-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-md);
+  transition: all 0.3s ease;
 }
 
-.todo-card {
+.explore-card-compact {
+  position: relative;
+  transition: all 0.3s ease, opacity 0.2s ease;
+}
+
+.explore-card-compact a {
   background: var(--white);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--box-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.explore-card-compact:hover a {
+  transform: scale(1.03);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.explore-card-compact img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.explore-card-compact:hover img {
+  transform: scale(1.1);
+}
+
+.explore-compact-content {
+  padding: var(--spacing-md);
+  flex: 1;
+}
+
+.explore-compact-content h4 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1rem;
+}
+
+.explore-compact-content p {
+  color: var(--gray);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive for both dynamic layouts */
+@media (max-width: 968px) {
+  .dynamic-explore-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .explore-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Dynamic Things to Do layout */
+.dynamic-todo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  min-height: 400px;
+}
+
+/* Featured card (left half) */
+.todo-featured {
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.todo-card-featured {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
   cursor: pointer;
 }
 
-.todo-card:hover {
-  transform: scale(1.05) translateY(-5px);
+.todo-card-featured img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.todo-card-featured:hover img {
+  transform: scale(1.05);
+}
+
+.todo-featured-content {
+  padding: var(--spacing-xl);
+  flex: 1;
+}
+
+.todo-featured-content h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.todo-featured-content p {
+  color: var(--dark);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Compact cards grid (right half) */
+.todo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.todo-card-compact {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease, opacity 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-card-compact:hover {
+  transform: scale(1.03);
   box-shadow: var(--box-shadow-lg);
   z-index: 10;
 }
 
-.todo-card img {
+.todo-card-compact img {
   width: 100%;
-  height: 160px;
+  height: 120px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.todo-card-content {
+.todo-card-compact:hover img {
+  transform: scale(1.1);
+}
+
+.todo-compact-content {
   padding: var(--spacing-md);
+  flex: 1;
 }
 
-.todo-card-content h4 {
-  margin-bottom: var(--spacing-xs);
+.todo-compact-content h4 {
   color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1rem;
 }
 
-.todo-card-content p {
-  font-size: 0.9rem;
+.todo-compact-content p {
   color: var(--gray);
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Animation classes */
+.todo-swapping {
+  animation: swapPulse 0.4s ease;
+}
+
+@keyframes swapPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; transform: scale(0.98); }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .dynamic-todo-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .todo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .todo-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Full width sections (map and things to do) */
