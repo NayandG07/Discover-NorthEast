@@ -21,7 +21,14 @@
       "Kamakhya Temple",
       "Majuli Island"
     ],
-    "cities": ["guwahati", "jorhat", "kaziranga", "shivasagar", "majuli", "haflong"],
+    "cities": [
+      "guwahati",
+      "jorhat",
+      "kaziranga",
+      "shivasagar",
+      "majuli",
+      "haflong"
+    ],
     "festivals": [
       {
         "name": "Bihu",
@@ -43,7 +50,7 @@
     "description": "The 'Land of the Dawn-Lit Mountains', Arunachal Pradesh is India's easternmost state with pristine natural beauty, diverse tribal cultures, and Buddhist monasteries.",
     "history": "Arunachal Pradesh has been inhabited by indigenous tribes for millennia. It was known as the North-East Frontier Agency (NEFA) during British rule and became a full-fledged state in 1987.",
     "coords": {
-      "lat": 28.2180,
+      "lat": 28.218,
       "lng": 94.7278
     },
     "featuredImages": [
@@ -58,7 +65,10 @@
       "Ziro Valley",
       "Parasuram Kund"
     ],
-    "cities": ["itanagar", "tawang"],
+    "cities": [
+      "itanagar",
+      "tawang"
+    ],
     "festivals": [
       {
         "name": "Losar",
@@ -80,7 +90,7 @@
     "description": "The 'Abode of Clouds', Meghalaya is famous for its living root bridges, stunning waterfalls, caves, and being one of the wettest places on Earth.",
     "history": "Meghalaya was carved out of Assam in 1972. The state is home to the Khasi, Jaintia, and Garo tribes, each with distinct cultural traditions and matrilineal societies.",
     "coords": {
-      "lat": 25.4670,
+      "lat": 25.467,
       "lng": 91.3662
     },
     "featuredImages": [
@@ -95,7 +105,10 @@
       "Umiam Lake",
       "Mawphlang Sacred Forest"
     ],
-    "cities": ["shillong", "cherrapunji"],
+    "cities": [
+      "shillong",
+      "cherrapunji"
+    ],
     "festivals": [
       {
         "name": "Nongkrem Dance",
@@ -132,7 +145,10 @@
       "Kangla Fort",
       "Shirui Hills"
     ],
-    "cities": ["imphal", "moirang"],
+    "cities": [
+      "imphal",
+      "moirang"
+    ],
     "festivals": [
       {
         "name": "Yaoshang",
@@ -169,7 +185,10 @@
       "Reiek Heritage Village",
       "Palak Lake"
     ],
-    "cities": ["aizawl", "lunglei"],
+    "cities": [
+      "aizawl",
+      "lunglei"
+    ],
     "festivals": [
       {
         "name": "Chapchar Kut",
@@ -206,7 +225,10 @@
       "Mokokchung",
       "Traditional Naga Villages"
     ],
-    "cities": ["kohima", "dimapur"],
+    "cities": [
+      "kohima",
+      "dimapur"
+    ],
     "festivals": [
       {
         "name": "Hornbill Festival",
@@ -228,7 +250,7 @@
     "description": "A Himalayan wonderland, Sikkim is known for its biodiversity, Buddhist monasteries, adventure tourism, and stunning views of Kanchenjunga, the third-highest peak in the world.",
     "history": "Sikkim was an independent Buddhist kingdom until 1975 when it became India's 22nd state. It has a unique cultural blend of Lepchas, Bhutias, and Nepalese communities.",
     "coords": {
-      "lat": 27.5330,
+      "lat": 27.533,
       "lng": 88.5122
     },
     "featuredImages": [
@@ -243,7 +265,10 @@
       "Tsomgo Lake",
       "Yumthang Valley"
     ],
-    "cities": ["gangtok", "pelling"],
+    "cities": [
+      "gangtok",
+      "pelling"
+    ],
     "festivals": [
       {
         "name": "Losar",
@@ -280,7 +305,10 @@
       "Unakoti Rock Carvings",
       "Sepahijala Wildlife Sanctuary"
     ],
-    "cities": ["agartala", "udaipur-tripura"],
+    "cities": [
+      "agartala",
+      "udaipur-tripura"
+    ],
     "festivals": [
       {
         "name": "Garia Puja",
