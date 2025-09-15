@@ -435,7 +435,7 @@ section {
 
 /* ===== Footer ===== */
 .main-footer {
-    background: var(--dark);
+    background: #000; /* Pure black footer */
     color: var(--white);
     padding: var(--spacing-xxl) 0 var(--spacing-lg);
     margin-top: var(--spacing-xxl);

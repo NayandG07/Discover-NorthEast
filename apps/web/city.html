@@ -7,6 +7,8 @@
     <meta name="description" content="Explore the city's attractions, local specialties, and cultural experiences">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/city.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
@@ -19,7 +21,7 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#states">States</a></li>
+                    <li><a href="index.html#states" class="active">States</a></li>
                     <li><a href="index.html#highlights">Highlights</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="admin.html" class="admin-link">Admin</a></li>
@@ -46,17 +48,10 @@
 
     <!-- City Hero with Slideshow -->
     <section class="city-hero" aria-label="City featured images">
-        <div class="slideshow-container" id="citySlideshow">
-            <div class="slides-wrapper">
-                <!-- Slides will be dynamically loaded -->
-            </div>
-            <button class="slide-prev" aria-label="Previous image">❮</button>
-            <button class="slide-next" aria-label="Next image">❯</button>
-            <div class="slide-indicators" role="tablist"></div>
-        </div>
+        <div id="cityHeroSlideshow" class="hero-slideshow"></div>
         <div class="city-hero-content">
-            <h1 id="cityName" class="city-title">Loading...</h1>
-            <p id="cityTagline" class="city-tagline"></p>
+            <h1 id="cityName" class="city-title animated fadeInUp">Loading...</h1>
+            <p id="cityTagline" class="city-tagline animated fadeInUp"></p>
         </div>
     </section>
 
@@ -81,44 +76,12 @@
                             <!-- Will be populated dynamically -->
                         </div>
                     </div>
-
-                    <!-- Things to Do -->
-                    <div class="info-card">
-                        <h2>Things to Do</h2>
-                        <div id="cityExplore" class="explore-list">
-                            <!-- Will be populated dynamically -->
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Sidebar -->
                 <aside class="info-sidebar">
-                    <!-- Local Specialties -->
-                    <div class="sidebar-card">
-                        <h3>Local Specialties</h3>
-                        <ul id="citySpecialties" class="specialties-list">
-                            <!-- Will be populated dynamically -->
-                        </ul>
-                    </div>
-
-                    <!-- Quick Info -->
-                    <div class="sidebar-card">
-                        <h3>Quick Info</h3>
-                        <div id="cityQuickInfo">
-                            <div class="fact-item">
-                                <span class="fact-icon">🌡️</span>
-                                <span>Best Time: Oct-Mar</span>
-                            </div>
-                            <div class="fact-item">
-                                <span class="fact-icon">✈️</span>
-                                <span id="cityConnectivity">Well Connected</span>
-                            </div>
-                            <div class="fact-item">
-                                <span class="fact-icon">🏨</span>
-                                <span>Hotels Available</span>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- City Photos Sidebar -->
+                    <div class="sidebar-photos" id="citySidebarImages" aria-label="City photos"></div>
 
                     <!-- Upload Photo -->
                     <div class="sidebar-card">
@@ -132,25 +95,36 @@
                     </div>
                 </aside>
             </div>
+            
+            <!-- City Map (full width) -->
+            <div class="full-width-section">
+                <div class="info-card">
+                    <h2>City Map</h2>
+                    <div id="cityMap" class="interactive-map" aria-label="City map with points of interest"></div>
+                </div>
+            </div>
+            
+            <!-- Things to Do (full width, same style as map) -->
+            <div class="full-width-section">
+                <div class="info-card">
+                    <h2>Things to Do</h2>
+                    <div id="cityExplore" class="things-todo-grid">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- City Map with POIs -->
-    <section class="city-map-section">
+    <!-- Explore More Near City -->
+    <section class="explore-near-section">
         <div class="container">
             <div class="section-header">
-                <h2>Points of Interest</h2>
-                <p>Explore key attractions and landmarks</p>
+                <h2>Explore More Near <span id="cityNameExploreNear"></span></h2>
+                <p>Discover interesting places around the city</p>
             </div>
-            <div class="map-container">
-                <div id="cityMap" class="interactive-map" aria-label="City map with points of interest"></div>
-                <!-- POIs List -->
-                <div class="pois-list" id="poisList">
-                    <h3>Places to Visit:</h3>
-                    <ul id="poisListItems">
-                        <!-- Will be populated dynamically -->
-                    </ul>
-                </div>
+            <div class="explore-near-grid" id="exploreNearGrid">
+                <!-- Will be populated dynamically -->
             </div>
         </div>
     </section>
@@ -215,7 +189,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="js/city.js"></script>
-    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/hero-slider.js"></script>
     <script type="module" src="js/lightbox.js"></script>
 </body>
 </html>

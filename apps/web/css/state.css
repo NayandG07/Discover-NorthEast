@@ -1,0 +1,86 @@
+/* State page specific styles (extracted from components.css) */
+
+/* State hero */
+.state-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.state-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-xxl);
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: var(--white);
+}
+
+.state-title {
+  color: var(--white);
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.state-tagline {
+  font-size: 1.25rem;
+  color: var(--gray-light);
+}
+
+/* Lists specific to state page */
+.highlights-list,
+.festivals-list {
+  list-style: none;
+}
+
+.highlights-list li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.highlights-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.festivals-list .festival-item {
+  padding: var(--spacing-md);
+  background: var(--light);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+}
+
+.festival-item h4 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+/* Other states links */
+.other-states-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.other-states-links a {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+}
+
+.other-states-links a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .state-title {
+    font-size: 2rem;
+  }
+}

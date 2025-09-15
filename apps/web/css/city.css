@@ -1,0 +1,294 @@
+/* City page specific styles (extracted and consolidated from components.css + page tweaks) */
+
+/* Hero */
+.city-hero { position: relative; height: 70vh; min-height: 500px; overflow: hidden; background: #000; }
+/* Position and style the hero text similar to home slider */
+.city-hero-content { display: none; }
+.city-title { color: var(--white); font-size: clamp(2rem, 2vw + 1rem, 3rem); margin-bottom: var(--spacing-sm); }
+.city-tagline { font-size: 1.1rem; color: rgba(255,255,255,0.95); }
+
+/* Info grid tweaks for city page */
+.city-info .info-grid { gap: 1.25rem; }
+.city-info .info-card h2 { margin-top: 0.25rem; }
+
+/* Readable long-form content for About and History (slightly smaller, fully revealed) */
+.summary-content,
+.history-content {
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: var(--dark);
+  max-height: none;
+  overflow: visible;
+}
+
+.summary-content p,
+.history-content p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Explore list (moved from components.css for city page) */
+.explore-list .explore-item { padding: var(--spacing-lg); background: var(--light); border-radius: var(--border-radius); margin-bottom: var(--spacing-md); border-left: 4px solid var(--accent-color); }
+.explore-item h4 { margin-bottom: var(--spacing-sm); color: var(--accent-color); }
+
+/* POIs list (moved from components.css for city page) */
+.pois-list { background: var(--white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); box-shadow: var(--box-shadow); margin-top: var(--spacing-xl); }
+.pois-list ul { list-style: none; margin: 0.25rem 0 0; }
+.pois-list li { padding: var(--spacing-md); border-bottom: 1px solid var(--light); }
+.pois-list li:last-child { border-bottom: none; }
+.poi-name { font-weight: 600; color: var(--primary-color); margin-bottom: var(--spacing-xs); }
+.poi-type { display: inline-block; padding: var(--spacing-xs) var(--spacing-sm); background: var(--accent-color); color: var(--white); font-size: 0.75rem; border-radius: var(--border-radius); margin-left: var(--spacing-sm); }
+
+/* Upload form (used on city page) */
+.upload-form { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+.upload-form input[type="file"] { font-size: 0.875rem; }
+.upload-form input[type="text"] { padding: var(--spacing-sm); border: 1px solid var(--gray-light); border-radius: var(--border-radius); }
+
+/* Upload form messages (page-specific presentation) */
+.upload-message { margin-top: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.95rem; display: none; }
+.upload-message.show { display: block; }
+.upload-message.info { background: #eef6ff; color: #074d8c; border: 1px solid #c9e2ff; }
+.upload-message.success { background: #f0fff4; color: #146c2e; border: 1px solid #b7f0c0; }
+.upload-message.error { background: #fff5f5; color: #8c1d18; border: 1px solid #ffd1d1; }
+
+/* Footer other city links */
+.other-cities-links { display: flex; flex-wrap: wrap; gap: var(--spacing-sm); }
+.other-cities-links a { padding: var(--spacing-xs) var(--spacing-sm); background: rgba(255,255,255,0.1); border-radius: var(--border-radius); font-size: 0.875rem; }
+.other-cities-links a:hover { background: rgba(255,255,255,0.2); }
+
+/* Explore Near grid (cards) */
+.explore-near-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.explore-near-card {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.explore-near-card:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-lg); }
+
+.explore-near-card img { width: 100%; height: 200px; object-fit: cover; }
+
+.explore-near-card-content { padding: var(--spacing-lg); }
+.explore-near-card-content h3 { margin-bottom: var(--spacing-sm); }
+.explore-near-card-content p { color: var(--gray); }
+
+/* Things to Do grid cards */
+.things-todo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.todo-card {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.todo-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: var(--box-shadow-lg);
+  z-index: 10;
+}
+
+.todo-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.todo-card-content {
+  padding: var(--spacing-md);
+}
+
+.todo-card-content h4 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.todo-card-content p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+/* Full width sections (map and things to do) */
+.full-width-section {
+  grid-column: 1 / -1;
+  margin-top: var(--spacing-xl);
+}
+
+.full-width-section .info-card {
+  margin-bottom: 0;
+}
+
+/* Add zoom animation to all card types */
+.explore-near-card,
+.gallery-item,
+.highlight-card,
+.city-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-near-card:hover,
+.gallery-item:hover,
+.highlight-card:hover,
+.city-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  z-index: 10;
+}
+
+/* Map sizing on city page (match home) */
+.interactive-map { width: 100%; height: 500px; border-radius: var(--border-radius-lg); box-shadow: var(--box-shadow-lg); }
+@media (max-width: 768px) {
+  .interactive-map { height: 300px; }
+  .city-title { font-size: 2rem; }
+}
+
+/* City hero enhanced overlay and animations to match home */
+.city-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Do not set a z-index on the container so child controls can sit above overlay */
+.city-hero .slideshow-container { position: relative; height: 100%; }
+.city-hero .slides-wrapper { position: relative; width: 100%; height: 100%; }
+.city-hero .slide { opacity: 0; transition: opacity 1.5s ease; }
+.city-hero .slide.active { opacity: 1; }
+.city-hero .slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); transition: transform 6s ease-out; }
+.city-hero .slide.active img { transform: scale(1); }
+
+/* Navigation arrows styling (match home hero look) */
+.city-hero .slide-prev,
+.city-hero .slide-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  color: white;
+  padding: 0;
+}
+
+.city-hero .slide-prev { left: 2rem; }
+.city-hero .slide-next { right: 2rem; }
+
+.city-hero .slide-prev:hover,
+.city-hero .slide-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Indicators styling (match home hero look) */
+.city-hero .slide-indicators {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 3;
+}
+
+.city-hero .slide-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.city-hero .slide-indicator.active {
+  width: 40px;
+  border-radius: 6px;
+  background: white;
+  border-color: white;
+}
+
+/* Minimal animation utilities to match home */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animated { animation-duration: 1s; animation-fill-mode: both; }
+.animated.fadeInUp { animation-name: fadeInUp; }
+
+/* Sidebar image holders */
+.image-holders {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.image-holders .image-holder {
+  width: 100%;
+  padding-top: 75%;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background: var(--light);
+  box-shadow: var(--box-shadow);
+}
+
+.image-holders .image-holder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sidebar stacked photos (no card, large images one below another) */
+.sidebar-photos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sidebar-photos img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+  .sidebar-photos img { height: 260px; }
+}
