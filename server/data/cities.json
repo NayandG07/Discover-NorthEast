@@ -38,28 +38,46 @@
       "Muga Silk",
       "Traditional Assamese Jewelry",
       "Pitha (Rice cakes)",
-      "Fish Curry"
+      "Fish Curry",
+      "Ropeway"
     ],
-    "gallery": [],
+    "gallery": [
+      {
+        "id": "1758019303708",
+        "url": "/uploads/1758019303703-289132229.jpg",
+        "caption": "Lachit Ghat",
+        "moderated": true,
+        "uploadedAt": "2025-09-16T10:41:43.708Z"
+      }
+    ],
     "pois": [
       {
         "id": "poi1",
         "title": "Kamakhya Temple",
-        "coords": { "lat": 26.1665, "lng": 91.7052 },
+        "coords": {
+          "lat": 26.1665,
+          "lng": 91.7052
+        },
         "type": "temple",
         "desc": "Ancient Hindu temple dedicated to goddess Kamakhya"
       },
       {
         "id": "poi2",
         "title": "Fancy Bazaar",
-        "coords": { "lat": 26.1826, "lng": 91.7415 },
+        "coords": {
+          "lat": 26.1826,
+          "lng": 91.7415
+        },
         "type": "market",
         "desc": "Bustling market for local goods and traditional items"
       },
       {
         "id": "poi3",
         "title": "Assam State Zoo",
-        "coords": { "lat": 26.1058, "lng": 91.7739 },
+        "coords": {
+          "lat": 26.1058,
+          "lng": 91.7739
+        },
         "type": "zoo",
         "desc": "Home to various wildlife including the one-horned rhinoceros"
       }
@@ -105,14 +123,20 @@
       {
         "id": "poi4",
         "title": "Raja Maidam",
-        "coords": { "lat": 26.7456, "lng": 94.2234 },
+        "coords": {
+          "lat": 26.7456,
+          "lng": 94.2234
+        },
         "type": "monument",
         "desc": "Royal burial ground of Ahom kings"
       },
       {
         "id": "poi5",
         "title": "Tocklai Tea Research Centre",
-        "coords": { "lat": 26.7689, "lng": 94.1678 },
+        "coords": {
+          "lat": 26.7689,
+          "lng": 94.1678
+        },
         "type": "research",
         "desc": "World's oldest tea research station"
       }
@@ -162,14 +186,20 @@
       {
         "id": "poi6",
         "title": "Ita Fort",
-        "coords": { "lat": 27.0863, "lng": 93.6124 },
+        "coords": {
+          "lat": 27.0863,
+          "lng": 93.6124
+        },
         "type": "fort",
         "desc": "14th century historical fort"
       },
       {
         "id": "poi7",
         "title": "Ganga Lake",
-        "coords": { "lat": 27.1298, "lng": 93.6211 },
+        "coords": {
+          "lat": 27.1298,
+          "lng": 93.6211
+        },
         "type": "lake",
         "desc": "Popular recreational spot"
       }
@@ -183,7 +213,7 @@
     "summary": "A high-altitude town famous for its Buddhist monastery, stunning landscapes, and Indo-China border proximity.",
     "history": "Tawang has been an important center of Tibetan Buddhism for centuries. The Tawang Monastery, founded in 1680, is the largest monastery in India.",
     "coords": {
-      "lat": 27.5860,
+      "lat": 27.586,
       "lng": 91.8687
     },
     "featuredImages": [
@@ -220,14 +250,20 @@
       {
         "id": "poi8",
         "title": "Tawang Monastery",
-        "coords": { "lat": 27.5847, "lng": 91.8567 },
+        "coords": {
+          "lat": 27.5847,
+          "lng": 91.8567
+        },
         "type": "monastery",
         "desc": "400-year-old Buddhist monastery"
       },
       {
         "id": "poi9",
         "title": "Tawang War Memorial",
-        "coords": { "lat": 27.5921, "lng": 91.8743 },
+        "coords": {
+          "lat": 27.5921,
+          "lng": 91.8743
+        },
         "type": "memorial",
         "desc": "Memorial for 1962 war martyrs"
       }
@@ -279,14 +315,20 @@
       {
         "id": "poi10",
         "title": "Umiam Lake",
-        "coords": { "lat": 25.6538, "lng": 91.8815 },
+        "coords": {
+          "lat": 25.6538,
+          "lng": 91.8815
+        },
         "type": "lake",
         "desc": "Large reservoir for water sports"
       },
       {
         "id": "poi11",
         "title": "Elephant Falls",
-        "coords": { "lat": 25.5372, "lng": 91.8196 },
+        "coords": {
+          "lat": 25.5372,
+          "lng": 91.8196
+        },
         "type": "waterfall",
         "desc": "Three-tiered scenic waterfall"
       }
@@ -336,14 +378,20 @@
       {
         "id": "poi12",
         "title": "Nohkalikai Falls",
-        "coords": { "lat": 25.2754, "lng": 91.6897 },
+        "coords": {
+          "lat": 25.2754,
+          "lng": 91.6897
+        },
         "type": "waterfall",
         "desc": "India's tallest plunge waterfall"
       },
       {
         "id": "poi13",
         "title": "Living Root Bridge",
-        "coords": { "lat": 25.2456, "lng": 91.7234 },
+        "coords": {
+          "lat": 25.2456,
+          "lng": 91.7234
+        },
         "type": "bridge",
         "desc": "Natural bridge made from living tree roots"
       }
@@ -357,7 +405,7 @@
     "summary": "The capital of Manipur, Imphal is known for its historical significance, cultural heritage, and the unique all-women's market.",
     "history": "Imphal has been the capital of Manipur since ancient times. It played a crucial role in World War II as the site of the Battle of Imphal against Japanese forces.",
     "coords": {
-      "lat": 24.8170,
+      "lat": 24.817,
       "lng": 93.9368
     },
     "featuredImages": [
@@ -393,14 +441,20 @@
       {
         "id": "poi14",
         "title": "Kangla Fort",
-        "coords": { "lat": 24.8074, "lng": 93.9384 },
+        "coords": {
+          "lat": 24.8074,
+          "lng": 93.9384
+        },
         "type": "fort",
         "desc": "Ancient fort and palace complex"
       },
       {
         "id": "poi15",
         "title": "Ima Keithel Market",
-        "coords": { "lat": 24.8063, "lng": 93.9344 },
+        "coords": {
+          "lat": 24.8063,
+          "lng": 93.9344
+        },
         "type": "market",
         "desc": "All-women's market with 3000+ vendors"
       }
@@ -450,14 +504,20 @@
       {
         "id": "poi16",
         "title": "Loktak Lake",
-        "coords": { "lat": 24.5052, "lng": 93.7681 },
+        "coords": {
+          "lat": 24.5052,
+          "lng": 93.7681
+        },
         "type": "lake",
         "desc": "Largest freshwater lake in NE India"
       },
       {
         "id": "poi17",
         "title": "INA Museum",
-        "coords": { "lat": 24.4981, "lng": 93.7752 },
+        "coords": {
+          "lat": 24.4981,
+          "lng": 93.7752
+        },
         "type": "museum",
         "desc": "Museum dedicated to Indian National Army"
       }
@@ -507,14 +567,20 @@
       {
         "id": "poi18",
         "title": "Solomon's Temple",
-        "coords": { "lat": 23.7431, "lng": 92.7214 },
+        "coords": {
+          "lat": 23.7431,
+          "lng": 92.7214
+        },
         "type": "temple",
         "desc": "Modern church with unique architecture"
       },
       {
         "id": "poi19",
         "title": "Bara Bazaar",
-        "coords": { "lat": 23.7278, "lng": 92.7169 },
+        "coords": {
+          "lat": 23.7278,
+          "lng": 92.7169
+        },
         "type": "market",
         "desc": "Main market for local goods"
       }
@@ -560,7 +626,10 @@
       {
         "id": "poi20",
         "title": "Lunglei Bridge",
-        "coords": { "lat": 22.8823, "lng": 92.7361 },
+        "coords": {
+          "lat": 22.8823,
+          "lng": 92.7361
+        },
         "type": "bridge",
         "desc": "Natural rock bridge formation"
       }
@@ -610,14 +679,20 @@
       {
         "id": "poi21",
         "title": "Kohima War Cemetery",
-        "coords": { "lat": 25.6721, "lng": 94.1053 },
+        "coords": {
+          "lat": 25.6721,
+          "lng": 94.1053
+        },
         "type": "cemetery",
         "desc": "WWII memorial cemetery"
       },
       {
         "id": "poi22",
         "title": "Kisama Heritage Village",
-        "coords": { "lat": 25.6456, "lng": 94.1123 },
+        "coords": {
+          "lat": 25.6456,
+          "lng": 94.1123
+        },
         "type": "village",
         "desc": "Venue for Hornbill Festival"
       }
@@ -663,7 +738,10 @@
       {
         "id": "poi23",
         "title": "Kachari Ruins",
-        "coords": { "lat": 25.8956, "lng": 93.7312 },
+        "coords": {
+          "lat": 25.8956,
+          "lng": 93.7312
+        },
         "type": "ruins",
         "desc": "13th century kingdom ruins"
       }
@@ -715,14 +793,20 @@
       {
         "id": "poi24",
         "title": "Rumtek Monastery",
-        "coords": { "lat": 27.2874, "lng": 88.6354 },
+        "coords": {
+          "lat": 27.2874,
+          "lng": 88.6354
+        },
         "type": "monastery",
         "desc": "Important Tibetan Buddhist monastery"
       },
       {
         "id": "poi25",
         "title": "Enchey Monastery",
-        "coords": { "lat": 27.3456, "lng": 88.6012 },
+        "coords": {
+          "lat": 27.3456,
+          "lng": 88.6012
+        },
         "type": "monastery",
         "desc": "200-year-old monastery"
       }
@@ -772,14 +856,20 @@
       {
         "id": "poi26",
         "title": "Pemayangtse Monastery",
-        "coords": { "lat": 27.3024, "lng": 88.2456 },
+        "coords": {
+          "lat": 27.3024,
+          "lng": 88.2456
+        },
         "type": "monastery",
         "desc": "One of Sikkim's oldest monasteries"
       },
       {
         "id": "poi27",
         "title": "Pelling Skywalk",
-        "coords": { "lat": 27.2987, "lng": 88.2398 },
+        "coords": {
+          "lat": 27.2987,
+          "lng": 88.2398
+        },
         "type": "viewpoint",
         "desc": "Glass skywalk with mountain views"
       }
@@ -829,14 +919,20 @@
       {
         "id": "poi28",
         "title": "Ujjayanta Palace",
-        "coords": { "lat": 23.8364, "lng": 91.2845 },
+        "coords": {
+          "lat": 23.8364,
+          "lng": 91.2845
+        },
         "type": "palace",
         "desc": "Former royal palace, now a museum"
       },
       {
         "id": "poi29",
         "title": "Jagannath Temple",
-        "coords": { "lat": 23.8298, "lng": 91.2801 },
+        "coords": {
+          "lat": 23.8298,
+          "lng": 91.2801
+        },
         "type": "temple",
         "desc": "Important Hindu temple"
       }
@@ -882,14 +978,20 @@
       {
         "id": "poi30",
         "title": "Tripura Sundari Temple",
-        "coords": { "lat": 23.5312, "lng": 91.4856 },
+        "coords": {
+          "lat": 23.5312,
+          "lng": 91.4856
+        },
         "type": "temple",
         "desc": "One of the 51 Shakti Peethas"
       },
       {
         "id": "poi31",
         "title": "Kalyan Sagar",
-        "coords": { "lat": 23.5367, "lng": 91.4798 },
+        "coords": {
+          "lat": 23.5367,
+          "lng": 91.4798
+        },
         "type": "lake",
         "desc": "Scenic lake with temple"
       }

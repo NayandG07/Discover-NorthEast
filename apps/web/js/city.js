@@ -29,7 +29,11 @@ async function loadCityData(slug) {
     try {
         // Show loading state
         document.getElementById('cityName').textContent = 'Loading...';
-        showLoading(document.getElementById('cityMap'));
+        
+        const loadingContainer = document.getElementById('placesGrid');
+        if (loadingContainer) {
+            showLoading(loadingContainer);
+        }
         
         // Fetch city data
         const cityData = await getCity(slug);
@@ -56,15 +60,17 @@ async function loadCityData(slug) {
         // Populate page content
         populateCityInfo(cityData);
         initCitySlider(cityData);
-        initCityMap(cityData);
-        populateExplore(cityData);
+        populatePlacesToVisit(cityData);
+        populateThingsToDo(cityData);
+        populateExploreMore(cityData);
         populateGallery(cityData);
-        populatePOIs(cityData);
-        populateOtherCities();
         
     } catch (error) {
         console.error('Failed to load city:', error);
-        showError(document.getElementById('cityMap'), 'Failed to load city data. Please try again.');
+        
+        // Show error in a container that exists
+        const errorContainer = document.getElementById('placesGrid') || document.body;
+        showError(errorContainer, 'Failed to load city data. Please try again.');
         
         // Show minimal info if available
         document.getElementById('cityName').textContent = 'Error Loading City';
@@ -160,23 +166,6 @@ function initCityMap(city) {
     initMap('cityMap', 'city', { city: city });
 }
 
-// Populate explore section
-function populateExplore(city) {
-    const exploreEl = document.getElementById('cityExplore');
-    
-    if (!exploreEl || !city.explore || city.explore.length === 0) {
-        if (exploreEl) exploreEl.innerHTML = '<p>No exploration data available</p>';
-        return;
-    }
-    
-    exploreEl.innerHTML = city.explore.map(item => `
-        <div class="explore-item">
-            <h4>${escapeHtml(item.title)}</h4>
-            <p>${escapeHtml(item.desc)}</p>
-        </div>
-    `).join('');
-}
-
 // Populate gallery
 function populateGallery(city) {
     const galleryGrid = document.getElementById('galleryGrid');
@@ -222,36 +211,179 @@ function populatePOIs(city) {
     `).join('');
 }
 
-// Populate other cities
-function populateOtherCities() {
-    const otherCitiesEl = document.getElementById('otherCities');
-    if (!otherCitiesEl) return;
+// Populate Places to Visit section
+function populatePlacesToVisit(city) {
+    const placesGrid = document.getElementById('placesGrid');
     
-    // Show cities from the same state if available
-    if (currentState && currentState.citiesData) {
-        const otherCities = currentState.citiesData.filter(c => c.slug !== currentCity.slug);
-        
-        if (otherCities.length > 0) {
-            otherCitiesEl.innerHTML = otherCities.map(city => 
-                `<a href="city.html?slug=${city.slug}">${escapeHtml(city.name)}</a>`
-            ).join('');
-            return;
-        }
+    if (!placesGrid) return;
+    
+    // Extract places from explore data or use predefined places
+    let places = [];
+    
+    if (city.explore && city.explore.length > 0) {
+        places = city.explore.map((item, index) => ({
+            title: item.title,
+            description: item.desc,
+            image: getPlaceImage(item.title, city.name, index)
+        }));
+    } else {
+        // Default places based on city
+        places = getDefaultPlaces(city.name);
     }
     
-    // Fallback: show some popular cities
-    const popularCities = [
-        { name: 'Guwahati', slug: 'guwahati' },
-        { name: 'Shillong', slug: 'shillong' },
-        { name: 'Gangtok', slug: 'gangtok' },
-        { name: 'Kohima', slug: 'kohima' }
-    ];
+    placesGrid.innerHTML = places.map(place => `
+        <div class="place-card">
+            <img src="${place.image}" alt="${escapeHtml(place.title)}" onerror="this.src='/assets/placeholder.jpg'">
+            <div class="place-card-content">
+                <h3>${escapeHtml(place.title)}</h3>
+                <p>${escapeHtml(place.description)}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Populate Things to Do section
+function populateThingsToDo(city) {
+    const thingsGrid = document.getElementById('thingsGrid');
     
-    otherCitiesEl.innerHTML = popularCities
-        .filter(c => c.slug !== currentCity?.slug)
-        .map(city => 
-            `<a href="city.html?slug=${city.slug}">${escapeHtml(city.name)}</a>`
-        ).join('');
+    if (!thingsGrid) return;
+    
+    // Get things to do data
+    const thingsToDo = getThingsToDoData(city.name);
+    
+    thingsGrid.innerHTML = thingsToDo.map(thing => `
+        <div class="thing-item">
+            <div class="thing-image">
+                <img src="${thing.image}" alt="${escapeHtml(thing.title)}" onerror="this.src='/assets/placeholder.jpg'">
+            </div>
+            <div class="thing-content">
+                <h3>${escapeHtml(thing.title)}</h3>
+                <p>${escapeHtml(thing.description)}</p>
+                ${thing.hasLink ? `<a href="#" class="visit-link">Visit →</a>` : ''}
+            </div>
+        </div>
+    `).join('');
+}
+
+// Populate Explore More section
+function populateExploreMore(city) {
+    const exploreMoreGrid = document.getElementById('exploreMoreGrid');
+    const exploreMoreTitle = document.getElementById('exploreMoreTitle');
+    
+    if (!exploreMoreGrid) return;
+    
+    // Update title with city name
+    if (exploreMoreTitle) {
+        exploreMoreTitle.textContent = `Explore More Near ${city.name}`;
+    }
+    
+    // Get nearby places data
+    const nearbyPlaces = getNearbyPlacesData(city.name);
+    
+    exploreMoreGrid.innerHTML = nearbyPlaces.map(place => `
+        <div class="explore-item">
+            <img src="${place.image}" alt="${escapeHtml(place.title)}" onerror="this.src='/assets/placeholder.jpg'">
+            <div class="explore-item-content">
+                <h3>${escapeHtml(place.title)}</h3>
+                <p>${escapeHtml(place.description)}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Get appropriate image for places
+function getPlaceImage(placeName, cityName, index) {
+    const name = placeName.toLowerCase();
+    const city = cityName.toLowerCase();
+    
+    // Mapping for specific places
+    const imageMap = {
+        'kamakhya temple': '/assets/assam/Kamakhya/pic_00000.png',
+        'kaziranga national park': '/assets/assam/Kaziranga/images.jpg',
+        'majuli island': '/assets/assam/Majuli/images.png',
+        'sivasagar': '/assets/assam/sivsagar/images (1) (1).jpg',
+        'rang ghar': '/assets/assam/sivsagar/rang-ghar.jpg',
+        'state museum': '/assets/placeholder.jpg',
+        'umananda island': '/assets/placeholder.jpg',
+        'brahmaputra river cruise': '/assets/placeholder.jpg'
+    };
+    
+    return imageMap[name] || `/assets/placeholder.jpg`;
+}
+
+// Get default places for cities
+function getDefaultPlaces(cityName) {
+    const defaultPlacesMap = {
+        'Guwahati': [
+            { title: 'Kamakhya Temple', description: 'One of the 51 Shakti Peethas, this ancient temple is a major pilgrimage site', image: '/assets/assam/Kamakhya/pic_00000.png' },
+            { title: 'Umananda Island', description: 'Visit the world\'s smallest inhabited river island with its Shiva temple', image: '/assets/placeholder.jpg' },
+            { title: 'State Museum', description: 'Explore Assam\'s rich cultural heritage and artifacts', image: '/assets/placeholder.jpg' },
+            { title: 'Brahmaputra River Cruise', description: 'Enjoy sunset cruises on the mighty Brahmaputra River', image: '/assets/placeholder.jpg' }
+        ]
+    };
+    
+    return defaultPlacesMap[cityName] || [
+        { title: 'Local Attractions', description: 'Discover beautiful places in the city', image: '/assets/placeholder.jpg' },
+        { title: 'Cultural Sites', description: 'Experience local culture and traditions', image: '/assets/placeholder.jpg' },
+        { title: 'Natural Beauty', description: 'Enjoy the scenic landscapes and nature', image: '/assets/placeholder.jpg' }
+    ];
+}
+
+// Get things to do data for cities
+function getThingsToDoData(cityName) {
+    const thingsToDoMap = {
+        'Guwahati': [
+            {
+                title: 'State Museum',
+                description: 'The Assam State Museum houses an impressive collection of sculptures, manuscripts, tribal artifacts, and historical items that showcase the rich cultural heritage of Northeast India. Established in 1940, it features sections on epigraphy, ethnography, and natural history.',
+                image: '/assets/placeholder.jpg',
+                hasLink: false
+            },
+            {
+                title: 'River Cruise',
+                description: 'Sunset cruises with cultural performances.',
+                image: '/assets/placeholder.jpg',
+                hasLink: false
+            }
+        ]
+    };
+    
+    return thingsToDoMap[cityName] || [
+        {
+            title: 'Local Experiences',
+            description: 'Discover unique local experiences and cultural activities that showcase the authentic spirit of the region.',
+            image: '/assets/placeholder.jpg',
+            hasLink: false
+        },
+        {
+            title: 'Adventure Activities',
+            description: 'Enjoy various adventure activities and outdoor experiences in beautiful natural settings.',
+            image: '/assets/placeholder.jpg',
+            hasLink: false
+        }
+    ];
+}
+
+// Get nearby places data
+function getNearbyPlacesData(cityName) {
+    const nearbyPlacesMap = {
+        'Guwahati': [
+            { title: 'Chandubi Lake', description: 'Natural lake for picnics (64km).', image: '/assets/placeholder.jpg' },
+            { title: 'Madan Kamdev', description: 'Archaeological ruins (40km).', image: '/assets/placeholder.jpg' }
+        ]
+    };
+    
+    return nearbyPlacesMap[cityName] || [
+        { title: 'Nearby Attraction 1', description: 'Interesting place near the city', image: '/assets/placeholder.jpg' },
+        { title: 'Nearby Attraction 2', description: 'Another beautiful destination', image: '/assets/placeholder.jpg' }
+    ];
+}
+
+// Populate other cities (function removed as per requirements)
+function populateOtherCities() {
+    // This function is no longer used since "Explore More Cities" section 
+    // has been removed from the footer as per requirements
+    return;
 }
 
 // Initialize upload form

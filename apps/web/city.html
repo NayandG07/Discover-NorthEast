@@ -78,14 +78,6 @@
                             <!-- Will be populated dynamically -->
                         </div>
                     </div>
-
-                    <!-- Things to Do -->
-                    <div class="info-card">
-                        <h2>Things to Do</h2>
-                        <div id="cityExplore" class="explore-list">
-                            <!-- Will be populated dynamically -->
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Sidebar -->
@@ -116,38 +108,45 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Upload Photo -->
-                    <div class="sidebar-card">
-                        <h3>Share Your Photos</h3>
-                        <form id="uploadForm" class="upload-form" enctype="multipart/form-data">
-                            <input type="file" id="photoInput" name="photo" accept="image/*" required>
-                            <input type="text" name="caption" placeholder="Photo caption..." maxlength="100">
-                            <button type="submit" class="btn btn-primary btn-small">Upload Photo</button>
-                        </form>
-                        <div id="uploadMessage" class="upload-message"></div>
-                    </div>
                 </aside>
             </div>
         </div>
     </section>
 
-    <!-- City Map with POIs -->
-    <section class="city-map-section">
+    <!-- Places to Visit Section -->
+    <section class="places-section">
         <div class="container">
             <div class="section-header">
-                <h2>Points of Interest</h2>
-                <p>Explore key attractions and landmarks</p>
+                <h2>Places to Visit</h2>
+                <p>Explore the most beautiful and significant places in the city</p>
             </div>
-            <div class="map-container">
-                <div id="cityMap" class="interactive-map" aria-label="City map with points of interest"></div>
-                <!-- POIs List -->
-                <div class="pois-list" id="poisList">
-                    <h3>Places to Visit:</h3>
-                    <ul id="poisListItems">
-                        <!-- Will be populated dynamically -->
-                    </ul>
-                </div>
+            <div class="places-grid" id="placesGrid">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Things to Do Section -->
+    <section class="things-to-do-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Things to Do</h2>
+            </div>
+            <div class="things-grid" id="thingsGrid">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore More Near City Section -->
+    <section class="explore-more-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="exploreMoreTitle">Explore More Near Guwahati</h2>
+                <p>Discover interesting places around the city</p>
+            </div>
+            <div class="explore-more-grid" id="exploreMoreGrid">
+                <!-- Will be populated dynamically -->
             </div>
         </div>
     </section>
@@ -197,10 +196,13 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Explore More Cities</h3>
-                    <div id="otherCities" class="other-cities-links">
-                        <!-- Will be populated dynamically -->
-                    </div>
+                    <h3>Share Your Photos</h3>
+                    <form id="uploadForm" class="upload-form footer-upload-form" enctype="multipart/form-data">
+                        <input type="file" id="photoInput" name="photo" accept="image/*" required>
+                        <input type="text" name="caption" placeholder="Photo caption..." maxlength="100">
+                        <button type="submit" class="btn btn-primary btn-small">Upload Photo</button>
+                    </form>
+                    <div id="uploadMessage" class="upload-message"></div>
                 </div>
             </div>
             <div class="footer-bottom">

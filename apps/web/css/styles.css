@@ -758,3 +758,251 @@ section {
         font-size: 1.5rem;
     }
 }
+
+/* ===== City Page Specific Styles ===== */
+
+/* Places to Visit Section */
+.places-section {
+    padding: var(--spacing-xxl) 0;
+    background: var(--light);
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.place-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-lg);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.place-card-content {
+    padding: var(--spacing-lg);
+}
+
+.place-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.place-card p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Things to Do Section */
+.things-to-do-section {
+    padding: var(--spacing-xxl) 0;
+    background: var(--white);
+}
+
+.things-grid {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.thing-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    background: var(--light);
+    border-radius: var(--border-radius-lg);
+    align-items: start;
+}
+
+.thing-item:nth-child(even) {
+    grid-template-columns: 1fr 300px;
+}
+
+.thing-item:nth-child(even) .thing-content {
+    order: -1;
+}
+
+.thing-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.thing-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.thing-content h3 {
+    color: var(--dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.thing-content p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.visit-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.3s ease;
+}
+
+.visit-link:hover {
+    gap: 10px;
+}
+
+/* Explore More Section */
+.explore-more-section {
+    padding: var(--spacing-xxl) 0;
+    background: var(--light);
+}
+
+.explore-more-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.explore-item {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+.explore-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-lg);
+}
+
+.explore-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.explore-item-content {
+    padding: var(--spacing-lg);
+}
+
+.explore-item h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.explore-item p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Footer Upload Form */
+.footer-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 300px;
+}
+
+.footer-upload-form input,
+.footer-upload-form button {
+    padding: var(--spacing-sm);
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.footer-upload-form input::placeholder {
+    color: var(--gray-light);
+}
+
+.footer-upload-form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: rgba(255,255,255,0.15);
+}
+
+.footer-upload-form button {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.footer-upload-form button:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Responsive Design for City Page */
+@media (max-width: 768px) {
+    .places-grid,
+    .explore-more-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .thing-item {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-lg);
+    }
+    
+    .thing-item:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    
+    .thing-item:nth-child(even) .thing-content {
+        order: 0;
+    }
+    
+    .thing-content h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .places-grid,
+    .explore-more-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .thing-item {
+        padding: var(--spacing-md);
+    }
+    
+    .footer-upload-form {
+        max-width: 100%;
+    }
+}
