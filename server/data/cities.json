@@ -43,11 +43,18 @@
     ],
     "gallery": [
       {
-        "id": "1757961768916",
-        "url": "/uploads/1757961768909-766626895.jpg",
-        "caption": "",
+        "id": "1758005090542",
+        "url": "/uploads/1758005090512-971032418.png",
+        "caption": "Kamakhya Temple",
         "moderated": true,
-        "uploadedAt": "2025-09-15T18:42:48.916Z"
+        "uploadedAt": "2025-09-16T06:44:50.542Z"
+      },
+      {
+        "id": "1758005226991",
+        "url": "/uploads/1758005226983-361936361.jpg",
+        "caption": "Lachi Ghat",
+        "moderated": true,
+        "uploadedAt": "2025-09-16T06:47:06.991Z"
       }
     ],
     "pois": [
