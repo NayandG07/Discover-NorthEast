@@ -105,17 +105,18 @@ function populateHighlights(container, states) {
     
     featured.forEach(state => {
         const card = document.createElement('div');
-        card.className = 'highlight-card';
+        card.className = 'state-card';
         card.onclick = () => window.location.href = `state.html?slug=${state.slug}`;
         
         card.innerHTML = `
+            <div class="card-badge state-badge">State</div>
             <img src="${state.featuredImages?.[0] || '/assets/placeholder.jpg'}" 
                  alt="${escapeHtml(state.name)}" 
                  onerror="this.src='/assets/placeholder.jpg'">
-            <div class="highlight-card-content">
+            <div class="state-card-content">
                 <h3>${escapeHtml(state.name)}</h3>
                 <p>${escapeHtml(state.description?.substring(0, 100) + '...')}</p>
-                <span class="highlight-link">Explore →</span>
+                <span class="card-link">Explore State →</span>
             </div>
         `;
         

@@ -344,89 +344,156 @@ section {
 .highlights-grid,
 .cities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: var(--spacing-xl);
 }
 
+/* ===== Unified Card Design ===== */
 .highlight-card,
-.city-card {
+.city-card,
+.state-card,
+.tourist-card {
+    position: relative;
     background: var(--white);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    transition: all 0.3s ease;
     cursor: pointer;
+    border: 1px solid var(--light);
+    height: fit-content;
 }
 
 .highlight-card:hover,
-.city-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--box-shadow-lg);
+.city-card:hover,
+.state-card:hover,
+.tourist-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
 }
 
 .highlight-card img,
-.city-card img {
+.city-card img,
+.state-card img,
+.tourist-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid var(--light);
+}
+
+.highlight-card:hover img,
+.city-card:hover img,
+.state-card:hover img,
+.tourist-card:hover img {
+    transform: scale(1.05);
 }
 
 .highlight-card-content,
-.city-card-content {
+.city-card-content,
+.state-card-content,
+.tourist-card-content {
     padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    min-height: 140px;
 }
 
 .highlight-card h3,
-.city-card h3 {
-    margin-bottom: var(--spacing-sm);
+.city-card h3,
+.state-card h3,
+.tourist-card h3 {
+    margin: 0;
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
-/* ===== Highlight Card Specific Styles ===== */
-.highlight-card {
-    position: relative;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    cursor: default;
+.highlight-card p,
+.city-card p,
+.state-card p,
+.tourist-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-.highlight-card:hover {
-    transform: translateY(-3px);
-}
-
+/* ===== Card Badges ===== */
 .card-badge {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--primary);
+    top: 12px;
+    right: 12px;
+    background: var(--accent-color);
     color: var(--white);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.875rem;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
     font-weight: 600;
-    z-index: 1;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.highlight-card .city-link {
-    color: var(--primary);
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+.card-badge.city-badge {
+    background: var(--primary-color);
 }
 
-/* City card link styles */
-.city-card .city-link {
-    color: var(--primary);
+.card-badge.state-badge {
+    background: var(--success-color);
+}
+
+.card-badge.tourist-badge {
+    background: var(--accent-color);
+}
+
+/* ===== Card Links ===== */
+.card-link,
+.highlight-card .city-link,
+.city-card .city-link,
+.state-card .state-link,
+.tourist-card .tourist-link {
+    color: var(--accent-color);
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    transition: gap 0.3s ease;
+    gap: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
-.city-card:hover .city-link {
+.card-link:hover,
+.highlight-card:hover .city-link,
+.city-card:hover .city-link,
+.state-card:hover .state-link,
+.tourist-card:hover .tourist-link {
     gap: 10px;
+    color: var(--primary-color);
+}
+
+/* ===== Specific Card Type Styling ===== */
+.tourist-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.city-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+.state-card {
+    border-left: 4px solid var(--success-color);
 }
 
 /* ===== City List Styles ===== */
@@ -620,6 +687,34 @@ section {
         height: 50vh;
     }
     
+    .highlights-grid,
+    .cities-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .highlight-card img,
+    .city-card img,
+    .state-card img,
+    .tourist-card img {
+        height: 180px;
+    }
+    
+    .highlight-card-content,
+    .city-card-content,
+    .state-card-content,
+    .tourist-card-content {
+        padding: var(--spacing-md);
+        min-height: 120px;
+    }
+    
+    .card-badge {
+        top: 8px;
+        right: 8px;
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+    
     .slide-content h2 {
         font-size: 2rem;
     }
@@ -646,6 +741,15 @@ section {
     .highlights-grid,
     .cities-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .highlight-card-content,
+    .city-card-content,
+    .state-card-content,
+    .tourist-card-content {
+        padding: var(--spacing-sm);
+        min-height: 100px;
     }
     
     .slide-prev,
