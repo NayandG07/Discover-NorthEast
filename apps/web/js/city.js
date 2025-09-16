@@ -1,6 +1,6 @@
 // City page functionality
 import { getCity, getState, uploadImage, getUrlParam, showLoading, showError, escapeHtml } from './data.js';
-import { Slider } from './slider.js';
+import { HeroSlider } from './hero-slider.js';
 import { initMap } from './map.js';
 import { createGallery } from './lightbox.js';
 
@@ -121,21 +121,37 @@ function populateCityInfo(city) {
     }
 }
 
-// Initialize city image slider
+// Initialize city image slider with enhanced hero slider
 function initCitySlider(city) {
     if (!city.featuredImages || city.featuredImages.length === 0) {
         // Use placeholder if no images
         city.featuredImages = ['/assets/placeholder.jpg'];
     }
     
-    const slider = new Slider('citySlideshow');
+    // Initialize HeroSlider with city-specific configuration
+    const heroSlider = new HeroSlider('cityHeroSlideshow', {
+        autoPlay: true,
+        autoPlayInterval: 5000,
+        transitionDuration: 1200,
+        animationType: 'fade-slide',
+        enableParallax: true,
+        enableTextAnimation: false, // No text animation for city images
+        enableProgressBar: true,
+        enableThumbnails: false,
+        pauseOnHover: true
+    });
     
-    const images = city.featuredImages.map((img, index) => ({
-        src: img,
-        alt: `${city.name} - Image ${index + 1}`
+    // Transform featuredImages into hero slider format
+    const slides = city.featuredImages.map((img, index) => ({
+        image: img,
+        alt: `${city.name} - Image ${index + 1}`,
+        title: '', // No title overlay for city images
+        subtitle: '',
+        description: '',
+        cta: null // No CTA button for city images
     }));
     
-    slider.loadSlides(images);
+    heroSlider.loadSlides(slides);
 }
 
 // Initialize city map with POIs

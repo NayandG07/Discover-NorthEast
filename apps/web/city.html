@@ -7,6 +7,8 @@
     <meta name="description" content="Explore the city's attractions, local specialties, and cultural experiences">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/city-hero-slider.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
@@ -44,17 +46,12 @@
         </div>
     </nav>
 
-    <!-- City Hero with Slideshow -->
-    <section class="city-hero" aria-label="City featured images">
-        <div class="slideshow-container" id="citySlideshow">
-            <div class="slides-wrapper">
-                <!-- Slides will be dynamically loaded -->
-            </div>
-            <button class="slide-prev" aria-label="Previous image">❮</button>
-            <button class="slide-next" aria-label="Next image">❯</button>
-            <div class="slide-indicators" role="tablist"></div>
+    <!-- City Hero with Enhanced Slider -->
+    <section class="hero-section city-hero-section" aria-label="City featured images">
+        <div class="hero-slideshow" id="cityHeroSlideshow">
+            <!-- Hero slider will be dynamically loaded here -->
         </div>
-        <div class="city-hero-content">
+        <div class="city-hero-overlay">
             <h1 id="cityName" class="city-title">Loading...</h1>
             <p id="cityTagline" class="city-tagline"></p>
         </div>
