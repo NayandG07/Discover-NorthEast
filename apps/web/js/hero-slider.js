@@ -84,7 +84,7 @@ export class HeroSlider {
         const defaultSlides = [
             {
                 // ASSAM - SLIDE IMAGE - REPLACE WITH ASSAM IMAGE
-                image: '/assets/states/assam-hero.jpg',
+                image: 'https://www.ibef.org/assets/images/states/Assam-2.jpg',
                 alt: 'Assam - Land of Red Rivers and Blue Hills',
                 title: 'Assam',
                 subtitle: 'The Gateway to Northeast India',
@@ -96,7 +96,7 @@ export class HeroSlider {
             },
             {
                 // ARUNACHAL PRADESH - SLIDE IMAGE - REPLACE WITH ARUNACHAL IMAGE
-                image: '/assets/states/arunachal-pradesh-hero.jpg',
+                image: 'https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2024/12/16180042/india-places-Tawang-gate.jpg',
                 alt: 'Arunachal Pradesh - Land of the Rising Sun',
                 title: 'Arunachal Pradesh',
                 subtitle: 'Land of the Dawn-Lit Mountains',
@@ -120,7 +120,7 @@ export class HeroSlider {
             },
             {
                 // MANIPUR - SLIDE IMAGE - REPLACE WITH MANIPUR IMAGE
-                image: '/assets/states/manipur-hero.jpg',
+                image: 'https://i.ytimg.com/vi/GzON0-006JI/maxresdefault.jpg',
                 alt: 'Manipur - Jewel of India',
                 title: 'Manipur',
                 subtitle: 'The Jewel of India',
@@ -132,7 +132,7 @@ export class HeroSlider {
             },
             {
                 // MIZORAM - SLIDE IMAGE - REPLACE WITH MIZORAM IMAGE
-                image: '/assets/states/mizoram-hero.jpg',
+                image: 'https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/06/16193059/Untitled-design-78.jpg',
                 alt: 'Mizoram - Land of the Blue Mountains',
                 title: 'Mizoram',
                 subtitle: 'Land of the Hill People',
@@ -144,7 +144,7 @@ export class HeroSlider {
             },
             {
                 // NAGALAND - SLIDE IMAGE - REPLACE WITH NAGALAND IMAGE
-                image: '/assets/states/nagaland-hero.jpg',
+                image: 'https://chalohoppo.com/wp-content/uploads/2023/06/Dzukou-Lily-at-Dzukou-Valley.jpg',
                 alt: 'Nagaland - Land of Festivals',
                 title: 'Nagaland',
                 subtitle: 'Land of Festivals',
@@ -156,7 +156,7 @@ export class HeroSlider {
             },
             {
                 // SIKKIM - SLIDE IMAGE - REPLACE WITH SIKKIM IMAGE
-                image: '/assets/states/sikkim-hero.jpg',
+                image: 'https://www.tripsavvy.com/thmb/LV9cMvf0PkFRA1hO6-CfTyFBxgs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-606222988-5a823cff1d64040037dfd9a1.jpg',
                 alt: 'Sikkim - Land of Mystic Splendour',
                 title: 'Sikkim',
                 subtitle: 'Small but Beautiful',
@@ -168,7 +168,7 @@ export class HeroSlider {
             },
             {
                 // TRIPURA - SLIDE IMAGE - REPLACE WITH TRIPURA IMAGE
-                image: '/assets/states/tripura-hero.jpg',
+                image: 'https://assets.cntraveller.in/photos/61f7e7522a4c3abc8e111e00/16:9/w_1920,h_1080,c_limit/unakoti%20tripura%20lead.jpg',
                 alt: 'Tripura - Land of Diverse Culture',
                 title: 'Tripura',
                 subtitle: 'Land of Eternal Beauty',

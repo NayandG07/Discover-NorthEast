@@ -10,9 +10,9 @@
       "lng": 92.9376
     },
     "featuredImages": [
-      "/assets/assam-1.jpg",
-      "/assets/assam-2.jpg",
-      "/assets/assam-3.jpg"
+      "https://www.adotrip.com/public/images/city/5eb257a9f0015-Dispur%20Travel.jpg",
+      "https://dm34pe2be5d8j.cloudfront.net/ckeditor_images/17937b3970af8dee8d5bafb57547b473.jpg",
+      "https://chalohoppo.com/wp-content/uploads/2024/11/38.png"
     ],
     "highlights": [
       "Kaziranga National Park",
@@ -47,9 +47,9 @@
       "lng": 94.7278
     },
     "featuredImages": [
-      "/assets/arunachal-1.jpg",
-      "/assets/arunachal-2.jpg",
-      "/assets/arunachal-3.jpg"
+      "https://www.tourmyindia.com/socialimg/arunachal-tour-packages.jpg",
+      "https://i0.wp.com/www.eastmojo.com/wp-content/uploads/2022/06/Untitled-design-35-2.png?fit=1920%2C1080&ssl=1",
+      "https://staticimg.amarujala.com/assets/images/2024/04/20/tawang_125108180273020722f4f39dc364173d.jpeg?q=80"
     ],
     "highlights": [
       "Tawang Monastery",
@@ -84,9 +84,9 @@
       "lng": 91.3662
     },
     "featuredImages": [
-      "/assets/meghalaya-1.jpg",
-      "/assets/meghalaya-2.jpg",
-      "/assets/meghalaya-3.jpg"
+      "https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/12/02180107/seven-sisters-falls-meghalaya.jpeg",
+      "https://images.lifestyleasia.com/wp-content/uploads/sites/2/2023/11/28182140/meghalaya-india-utkarsh-b-unsplash-inline.jpeg",
+      "https://images.freekaamaal.com/post_images/1722944422.webp"
     ],
     "highlights": [
       "Living Root Bridges",
@@ -121,8 +121,8 @@
       "lng": 93.9063
     },
     "featuredImages": [
-      "/assets/manipur-1.jpg",
-      "/assets/manipur-2.jpg",
+      "https://i.pinimg.com/originals/14/66/c2/1466c2a3c90e6f8abd81d115cc0a842d.jpg",
+      "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2025/04/03100840/Mizoram-waterfall.jpg",
       "/assets/manipur-3.jpg"
     ],
     "highlights": [
@@ -158,9 +158,9 @@
       "lng": 92.9376
     },
     "featuredImages": [
-      "/assets/mizoram-1.jpg",
-      "/assets/mizoram-2.jpg",
-      "/assets/mizoram-3.jpg"
+      "https://www.adotrip.com/public/images/city/master_images/5e411f60a0dc5-Aizawl_Attractions.jpg",
+      "https://www.adotrip.com/public/images/areas/5c3dcf4a8f497-Palak%20Lake%20Travel.jpg",
+      "https://www.adotrip.com/public/images/events/master_images/5e2e93ee382ce-Chapchar_Kut_Attractions.jpg"
     ],
     "highlights": [
       "Blue Mountains",
@@ -195,9 +195,9 @@
       "lng": 94.5624
     },
     "featuredImages": [
-      "/assets/nagaland-1.jpg",
-      "/assets/nagaland-2.jpg",
-      "/assets/nagaland-3.jpg"
+      "https://www.adotrip.com/public/images/city/master_images/5e412c55b7870-Mokukchung_Attractions.jpg",
+      "https://www.adotrip.com/public/images/city/master_images/5e412229e894c-Zunheboto_Package_Tour.jpg",
+      "https://www.adotrip.com/public/images/state/master_images/5f215a8f6c2a7-Nagaland_Attractions.jpg"
     ],
     "highlights": [
       "Hornbill Festival",
@@ -232,7 +232,7 @@
       "lng": 88.5122
     },
     "featuredImages": [
-      "/assets/sikkim-1.jpg",
+      "https://www.adotrip.com/public/images/city/master_images/5e3d0c5e61d04-Gangtok_Sightseeing.jpg",
       "/assets/sikkim-2.jpg",
       "/assets/sikkim-3.jpg"
     ],

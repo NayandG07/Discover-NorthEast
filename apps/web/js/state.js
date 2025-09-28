@@ -156,41 +156,160 @@ function populateCities(state) {
     const citiesGrid = document.getElementById('citiesGrid');
     const citiesList = document.getElementById('citiesList');
     
-    if (!state.citiesData || state.citiesData.length === 0) {
-        if (citiesGrid) citiesGrid.innerHTML = '<p>No cities data available</p>';
+    // Combine cities and popular places from highlights
+    let placesToShow = [];
+    
+    // Add cities if available
+    if (state.citiesData && state.citiesData.length > 0) {
+        placesToShow = [...state.citiesData];
+    }
+    
+    // Add popular places from highlights (excluding cities already shown)
+    if (state.highlights && state.highlights.length > 0) {
+        const cityNames = state.citiesData ? state.citiesData.map(c => c.name.toLowerCase()) : [];
+        
+        state.highlights.forEach((highlight, index) => {
+            // Handle both string and object highlights
+            const highlightName = typeof highlight === 'string' ? highlight : highlight.name;
+            const highlightData = typeof highlight === 'object' ? highlight : null;
+            
+            // Skip if this highlight is already in cities
+            if (!cityNames.includes(highlightName.toLowerCase())) {
+                // Check if this is a known city that should have a page
+                const slug = generateSlug(highlightName);
+                const isKnownCity = isKnownCitySlug(slug);
+                
+                // Create a place object for highlights
+                placesToShow.push({
+                    name: highlightName,
+                    slug: slug,
+                    summary: highlightData?.summary || `Popular tourist destination in ${state.name}`,
+                    image: highlightData?.image || getPlaceholderImage(highlightName),
+                    isHighlight: true,
+                    isLinked: isKnownCity,
+                    type: isKnownCity ? 'city' : 'tourist-place'
+                });
+            }
+        });
+    }
+    
+    if (placesToShow.length === 0) {
+        if (citiesGrid) citiesGrid.innerHTML = '<p>No places data available</p>';
         return;
     }
     
-    // Populate cities grid
+    // Populate places grid with consistent card design
     if (citiesGrid) {
-        citiesGrid.innerHTML = state.citiesData.map(city => `
-            <div class="city-card" onclick="window.location.href='city.html?slug=${city.slug}'">
-                <img src="${city.featuredImages?.[0] || '/assets/placeholder.jpg'}" 
-                     alt="${escapeHtml(city.name)}"
-                     onerror="this.src='/assets/placeholder.jpg'">
-                <div class="city-card-content">
-                    <h3>${escapeHtml(city.name)}</h3>
-                    <p>${escapeHtml(city.summary?.substring(0, 100) + '...')}</p>
-                    <span class="city-link">Explore →</span>
-                </div>
-            </div>
-        `).join('');
+        citiesGrid.innerHTML = placesToShow.map(place => {
+            return createUnifiedCard(place, state);
+        }).join('');
     }
     
-    // Populate cities list (fallback for mobile)
+    // Populate places list (fallback for mobile)
     if (citiesList) {
-        citiesList.innerHTML = state.citiesData.map(city => `
-            <li>
-                <a href="city.html?slug=${city.slug}" class="city-list-link">
-                    <span class="city-icon">🏙️</span>
-                    <div>
-                        <strong>${escapeHtml(city.name)}</strong>
-                        <p>${escapeHtml(city.summary?.substring(0, 80) + '...')}</p>
-                    </div>
-                </a>
-            </li>
-        `).join('');
+        citiesList.innerHTML = placesToShow.map(place => {
+            if (place.isLinked) {
+                return `
+                    <li>
+                        <a href="city.html?slug=${place.slug}" class="city-list-link">
+                            <span class="city-icon">${place.type === 'city' ? '🏙️' : '📍'}</span>
+                            <div>
+                                <strong>${escapeHtml(place.name)}</strong>
+                                <p>${escapeHtml(place.summary?.substring(0, 80) + '...')}</p>
+                            </div>
+                        </a>
+                    </li>
+                `;
+            } else {
+                return `
+                    <li>
+                        <div class="city-list-link">
+                            <span class="city-icon">📍</span>
+                            <div>
+                                <strong>${escapeHtml(place.name)}</strong>
+                                <p>${escapeHtml(place.summary)}</p>
+                            </div>
+                        </div>
+                    </li>
+                `;
+            }
+        }).join('');
     }
+}
+
+// Create unified card component
+function createUnifiedCard(place, state) {
+    const isLinked = place.isLinked || !place.isHighlight;
+    const cardType = place.type === 'city' ? 'city-card' : 'tourist-card';
+    const badgeText = place.type === 'city' ? 'City' : 'Popular Place';
+    const badgeClass = place.type === 'city' ? 'city-badge' : 'tourist-badge';
+    const linkText = place.type === 'city' ? 'Explore City →' : '🏔️ Tourist Attraction';
+    const onClick = isLinked ? `onclick="window.location.href='city.html?slug=${place.slug}'"` : '';
+    const cursorStyle = isLinked ? 'cursor: pointer;' : 'cursor: default;';
+    
+    return `
+        <div class="${cardType}" ${onClick} style="${cursorStyle}">
+            <div class="card-badge ${badgeClass}">${badgeText}</div>
+            <img src="${place.featuredImages?.[0] || place.image || '/assets/placeholder.jpg'}" 
+                 alt="${escapeHtml(place.name)}"
+                 onerror="this.src='/assets/placeholder.jpg'">
+            <div class="city-card-content">
+                <h3>${escapeHtml(place.name)}</h3>
+                <p>${escapeHtml(place.summary?.substring(0, 100) + '...')}</p>
+                <span class="card-link">${linkText}</span>
+            </div>
+        </div>
+    `;
+}
+
+// Generate URL-friendly slug from place name
+function generateSlug(name) {
+    // Handle special cases for city name variations
+    const normalizedName = name.toLowerCase()
+        .replace('shivasagar', 'sivasagar') // Handle Shivasagar -> Sivasagar mapping
+        .replace(/temple$/, '') // Remove 'temple' suffix for temple attractions
+        .replace(/national park$/, '') // Remove 'national park' suffix
+        .trim();
+    
+    return normalizedName
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+// Check if a city slug has a corresponding page
+function isKnownCitySlug(slug) {
+    const knownCitySlugs = [
+        'guwahati', 'jorhat', 'kaziranga', 'shivasagar', 'majuli', 'haflong',
+        'itanagar', 'tawang', 'shillong', 'cherrapunji', 'imphal', 'moirang',
+        'aizawl', 'lunglei', 'kohima', 'dimapur', 'gangtok', 'pelling',
+        'agartala', 'udaipur-tripura'
+    ];
+    return knownCitySlugs.includes(slug);
+}
+
+// Get appropriate placeholder image based on place name
+function getPlaceholderImage(placeName) {
+    const name = placeName.toLowerCase();
+    
+    // Map certain places to specific placeholder images if available
+    const imageMap = {
+        'kaziranga': '/assets/assam/Kaziranga/images.jpg',
+        'kaziranga national park': '/assets/assam/Kaziranga/images.jpg',
+        'majuli': '/assets/assam/Majuli/images.png',
+        'majuli island': '/assets/assam/Majuli/images.png',
+        'sivasagar': '/assets/assam/sivsagar/images (1) (1).jpg',
+        'shivasagar': '/assets/assam/sivsagar/images (1) (1).jpg',
+        'kamakhya': '/assets/assam/Kamakhya/pic_00000.png',
+        'kamakhya temple': '/assets/assam/Kamakhya/pic_00000.png',
+        'manas': '/assets/placeholder.jpg',
+        'manas national park': '/assets/placeholder.jpg',
+        'tawang monastery': '/assets/Arunachal/bomdila-monastery.jpeg',
+        'bomdila monastery': '/assets/Arunachal/bomdila-monastery.jpeg',
+        'elephant falls': '/assets/placeholder.jpg',
+        'umiam lake': '/assets/placeholder.jpg'
+    };
+    
+    return imageMap[name] || '/assets/placeholder.jpg';
 }
 
 // Populate other states links
