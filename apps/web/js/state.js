@@ -1,6 +1,6 @@
 // State page functionality
 import { getState, getUrlParam, showLoading, showError, escapeHtml } from './data.js';
-import { Slider } from './slider.js';
+import { HeroSlider } from './hero-slider.js';
 import { initMap } from './map.js';
 
 let currentState = null;
@@ -126,14 +126,36 @@ function initStateSlider(state) {
         state.featuredImages = ['/assets/placeholder.jpg'];
     }
     
-    const slider = new Slider('stateSlideshow');
+    // Create HeroSlider with same options as home page but without progress bar
+    const heroSlider = new HeroSlider('stateHeroSlideshow', {
+        autoPlay: true,
+        autoPlayInterval: 6000,
+        transitionDuration: 1500,
+        animationType: 'fade-slide',
+        enableParallax: true,
+        enableTextAnimation: true,
+        enableProgressBar: false,  // Disabled progress bar for state page
+        enableThumbnails: false,
+        pauseOnHover: true
+    });
     
-    const images = state.featuredImages.map((img, index) => ({
-        src: img,
-        alt: `${state.name} - Image ${index + 1}`
+    // Convert state images to hero slider format
+    const slides = state.featuredImages.map((img, index) => ({
+        image: img,
+        alt: `${state.name} - ${state.capital || 'Northeast India'}`,
+        title: state.name,
+        subtitle: state.capital ? `Capital: ${state.capital}` : 'Discover the beauty',
+        description: state.highlights && state.highlights.length > 0 
+            ? `Explore ${state.highlights.slice(0, 3).join(', ')} and more`
+            : state.description ? state.description.substring(0, 150) + '...'
+            : 'Discover the unique culture and natural beauty',
+        cta: {
+            text: 'Explore Cities',
+            link: '#citiesGrid'
+        }
     }));
     
-    slider.loadSlides(images);
+    heroSlider.loadSlides(slides);
 }
 
 // Initialize state map with cities

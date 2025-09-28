@@ -178,7 +178,7 @@ function initCitySlider(city) {
         animationType: 'fade-slide',
         enableParallax: true,
         enableTextAnimation: true,
-        enableProgressBar: true,
+        enableProgressBar: false,  // Disabled progress bar for city page
         enableThumbnails: false,
         pauseOnHover: true
     });

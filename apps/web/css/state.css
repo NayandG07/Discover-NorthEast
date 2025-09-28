@@ -3,29 +3,38 @@
 /* State hero */
 .state-hero {
   position: relative;
-  height: 400px;
+  height: 100vh;
+  min-height: 745px;
   overflow: hidden;
+  background: #000;
 }
 
+/* Override hero-section defaults for state page - match home page exactly */
+.hero-section.state-hero {
+  height: 100vh !important;
+  min-height: 745px !important;
+  overflow: hidden !important;
+  background: #000 !important;
+}
+
+/* Hide state-hero-content as the hero slider already displays title and subtitle */
 .state-hero-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--spacing-xxl);
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  color: var(--white);
+  display: none;
 }
 
 .state-title {
   color: var(--white);
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
 }
 
 .state-tagline {
   font-size: 1.25rem;
-  color: var(--gray-light);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
 }
 
 /* Lists specific to state page */
@@ -80,7 +89,19 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero-section.state-hero {
+    height: 70vh !important;
+    min-height: 500px !important;
+  }
+  
   .state-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section.state-hero {
+    height: 60vh !important;
+    min-height: 400px !important;
   }
 }

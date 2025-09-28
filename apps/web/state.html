@@ -7,6 +7,7 @@
     <meta name="description" content="Explore the state's unique attractions, cities, culture and heritage">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
     <link rel="stylesheet" href="css/state.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
@@ -45,14 +46,9 @@
     </nav>
 
     <!-- State Hero with Slideshow -->
-    <section class="state-hero" aria-label="State featured images">
-        <div class="slideshow-container" id="stateSlideshow">
-            <div class="slides-wrapper">
-                <!-- Slides will be dynamically loaded -->
-            </div>
-            <button class="slide-prev" aria-label="Previous image">❮</button>
-            <button class="slide-next" aria-label="Next image">❯</button>
-            <div class="slide-indicators" role="tablist"></div>
+    <section class="hero-section state-hero" aria-label="State featured images">
+        <div id="stateHeroSlideshow" class="hero-slideshow">
+            <!-- Hero slider will be dynamically initialized here -->
         </div>
         <div class="state-hero-content">
             <h1 id="stateName" class="state-title">Loading...</h1>
@@ -190,6 +186,6 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="js/state.js"></script>
-    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/hero-slider.js"></script>
 </body>
 </html>
